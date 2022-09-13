@@ -1,0 +1,1074 @@
+[
+    {
+        "data": "200001",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2000/01%20-%20Janeiro/VRA_20001.csv"
+    },
+    {
+        "data": "200002",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2000/02%20-%20Fevereiro/VRA_20002.csv"
+    },
+    {
+        "data": "200003",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2000/03%20-%20Mar%C3%A7o/VRA_20003.csv"
+    },
+    {
+        "data": "200004",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2000/04%20-%20Abril/VRA_20004.csv"
+    },
+    {
+        "data": "200005",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2000/05%20-%20Maio/VRA_20005.csv"
+    },
+    {
+        "data": "200006",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2000/06%20-%20Junho/VRA_20006.csv"
+    },
+    {
+        "data": "200007",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2000/07%20-%20Julho/VRA_20007.csv"
+    },
+    {
+        "data": "200008",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2000/08%20-%20Agosto/VRA_20008.csv"
+    },
+    {
+        "data": "200009",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2000/09%20-%20Setembro/VRA_20009.csv"
+    },
+    {
+        "data": "200010",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2000/10%20-%20Outubro/VRA_200010.csv"
+    },
+    {
+        "data": "200011",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2000/11%20-%20Novembro/VRA_200011.csv"
+    },
+    {
+        "data": "200012",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2000/12%20-%20Dezembro/VRA_200012.csv"
+    },
+    {
+        "data": "200101",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2001/01%20-%20Janeiro/VRA_20011.csv"
+    },
+    {
+        "data": "200102",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2001/02%20-%20Fevereiro/VRA_20012.csv"
+    },
+    {
+        "data": "200103",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2001/03%20-%20Mar%C3%A7o/VRA_20013.csv"
+    },
+    {
+        "data": "200104",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2001/04%20-%20Abril/VRA_20014.csv"
+    },
+    {
+        "data": "200105",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2001/05%20-%20Maio/VRA_20015.csv"
+    },
+    {
+        "data": "200106",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2001/06%20-%20Junho/VRA_20016.csv"
+    },
+    {
+        "data": "200107",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2001/07%20-%20Julho/VRA_20017.csv"
+    },
+    {
+        "data": "200108",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2001/08%20-%20Agosto/VRA_20018.csv"
+    },
+    {
+        "data": "200109",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2001/09%20-%20Setembro/VRA_20019.csv"
+    },
+    {
+        "data": "200110",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2001/10%20-%20Outubro/VRA_200110.csv"
+    },
+    {
+        "data": "200111",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2001/11%20-%20Novembro/VRA_200111.csv"
+    },
+    {
+        "data": "200112",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2001/12%20-%20Dezembro/VRA_200112.csv"
+    },
+    {
+        "data": "200201",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2002/01%20-%20Janeiro/VRA_20021.csv"
+    },
+    {
+        "data": "200202",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2002/02%20-%20Fevereiro/VRA_20022.csv"
+    },
+    {
+        "data": "200203",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2002/03%20-%20Mar%C3%A7o/VRA_20023.csv"
+    },
+    {
+        "data": "200204",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2002/04%20-%20Abril/VRA_20024.csv"
+    },
+    {
+        "data": "200205",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2002/05%20-%20Maio/VRA_20025.csv"
+    },
+    {
+        "data": "200206",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2002/06%20-%20Junho/VRA_20026.csv"
+    },
+    {
+        "data": "200207",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2002/07%20-%20Julho/VRA_20027.csv"
+    },
+    {
+        "data": "200208",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2002/08%20-%20Agosto/VRA_20028.csv"
+    },
+    {
+        "data": "200209",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2002/09%20-%20Setembro/VRA_20029.csv"
+    },
+    {
+        "data": "200210",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2002/10%20-%20Outubro/VRA_200210.csv"
+    },
+    {
+        "data": "200211",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2002/11%20-%20Novembro/VRA_200211.csv"
+    },
+    {
+        "data": "200212",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2002/12%20-%20Dezembro/VRA_200212.csv"
+    },
+    {
+        "data": "200301",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2003/01%20-%20Janeiro/VRA_20031.csv"
+    },
+    {
+        "data": "200302",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2003/02%20-%20Fevereiro/VRA_20032.csv"
+    },
+    {
+        "data": "200303",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2003/03%20-%20Mar%C3%A7o/VRA_20033.csv"
+    },
+    {
+        "data": "200304",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2003/04%20-%20Abril/VRA_20034.csv"
+    },
+    {
+        "data": "200305",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2003/05%20-%20Maio/VRA_20035.csv"
+    },
+    {
+        "data": "200306",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2003/06%20-%20Junho/VRA_20036.csv"
+    },
+    {
+        "data": "200307",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2003/07%20-%20Julho/VRA_20037.csv"
+    },
+    {
+        "data": "200308",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2003/08%20-%20Agosto/VRA_20038.csv"
+    },
+    {
+        "data": "200309",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2003/09%20-%20Setembro/VRA_20039.csv"
+    },
+    {
+        "data": "200310",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2003/10%20-%20Outubro/VRA_200310.csv"
+    },
+    {
+        "data": "200311",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2003/11%20-%20Novembro/VRA_200311.csv"
+    },
+    {
+        "data": "200312",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2003/12%20-%20Dezembro/VRA_200312.csv"
+    },
+    {
+        "data": "200401",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2004/01%20-%20Janeiro/VRA_20041.csv"
+    },
+    {
+        "data": "200402",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2004/02%20-%20Fevereiro/VRA_20042.csv"
+    },
+    {
+        "data": "200403",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2004/03%20-%20Mar%C3%A7o/VRA_20043.csv"
+    },
+    {
+        "data": "200404",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2004/04%20-%20Abril/VRA_20044.csv"
+    },
+    {
+        "data": "200405",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2004/05%20-%20Maio/VRA_20045.csv"
+    },
+    {
+        "data": "200406",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2004/06%20-%20Junho/VRA_20046.csv"
+    },
+    {
+        "data": "200407",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2004/07%20-%20Julho/VRA_20047.csv"
+    },
+    {
+        "data": "200408",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2004/08%20-%20Agosto/VRA_20048.csv"
+    },
+    {
+        "data": "200409",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2004/09%20-%20Setembro/VRA_20049.csv"
+    },
+    {
+        "data": "200410",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2004/10%20-%20Outubro/VRA_200410.csv"
+    },
+    {
+        "data": "200411",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2004/11%20-%20Novembro/VRA_200411.csv"
+    },
+    {
+        "data": "200412",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2004/12%20-%20Dezembro/VRA_200412.csv"
+    },
+    {
+        "data": "200501",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2005/01%20-%20Janeiro/VRA_20051.csv"
+    },
+    {
+        "data": "200502",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2005/02%20-%20Fevereiro/VRA_20052.csv"
+    },
+    {
+        "data": "200503",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2005/03%20-%20Mar%C3%A7o/VRA_20053.csv"
+    },
+    {
+        "data": "200504",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2005/04%20-%20Abril/VRA_20054.csv"
+    },
+    {
+        "data": "200505",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2005/05%20-%20Maio/VRA_20055.csv"
+    },
+    {
+        "data": "200506",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2005/06%20-%20Junho/VRA_20056.csv"
+    },
+    {
+        "data": "200507",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2005/07%20-%20Julho/VRA_20057.csv"
+    },
+    {
+        "data": "200508",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2005/08%20-%20Agosto/VRA_20058.csv"
+    },
+    {
+        "data": "200509",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2005/09%20-%20Setembro/VRA_20059.csv"
+    },
+    {
+        "data": "200510",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2005/10%20-%20Outubro/VRA_200510.csv"
+    },
+    {
+        "data": "200511",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2005/11%20-%20Novembro/VRA_200511.csv"
+    },
+    {
+        "data": "200512",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2005/12%20-%20Dezembro/VRA_200512.csv"
+    },
+    {
+        "data": "200601",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2006/01%20-%20Janeiro/VRA_20061.csv"
+    },
+    {
+        "data": "200602",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2006/02%20-%20Fevereiro/VRA_20062.csv"
+    },
+    {
+        "data": "200603",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2006/03%20-%20Mar%C3%A7o/VRA_20063.csv"
+    },
+    {
+        "data": "200604",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2006/04%20-%20Abril/VRA_20064.csv"
+    },
+    {
+        "data": "200605",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2006/05%20-%20Maio/VRA_20065.csv"
+    },
+    {
+        "data": "200606",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2006/06%20-%20Junho/VRA_20066.csv"
+    },
+    {
+        "data": "200607",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2006/07%20-%20Julho/VRA_20067.csv"
+    },
+    {
+        "data": "200608",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2006/08%20-%20Agosto/VRA_20068.csv"
+    },
+    {
+        "data": "200609",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2006/09%20-%20Setembro/VRA_20069.csv"
+    },
+    {
+        "data": "200610",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2006/10%20-%20Outubro/VRA_200610.csv"
+    },
+    {
+        "data": "200611",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2006/11%20-%20Novembro/VRA_200611.csv"
+    },
+    {
+        "data": "200612",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2006/12%20-%20Dezembro/VRA_200612.csv"
+    },
+    {
+        "data": "200701",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2007/01%20-%20Janeiro/VRA_20071.csv"
+    },
+    {
+        "data": "200702",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2007/02%20-%20Fevereiro/VRA_20072.csv"
+    },
+    {
+        "data": "200703",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2007/03%20-%20Mar%C3%A7o/VRA_20073.csv"
+    },
+    {
+        "data": "200704",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2007/04%20-%20Abril/VRA_20074.csv"
+    },
+    {
+        "data": "200705",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2007/05%20-%20Maio/VRA_20075.csv"
+    },
+    {
+        "data": "200706",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2007/06%20-%20Junho/VRA_20076.csv"
+    },
+    {
+        "data": "200707",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2007/07%20-%20Julho/VRA_20077.csv"
+    },
+    {
+        "data": "200708",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2007/08%20-%20Agosto/VRA_20078.csv"
+    },
+    {
+        "data": "200709",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2007/09%20-%20Setembro/VRA_20079.csv"
+    },
+    {
+        "data": "200710",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2007/10%20-%20Outubro/VRA_200710.csv"
+    },
+    {
+        "data": "200711",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2007/11%20-%20Novembro/VRA_200711.csv"
+    },
+    {
+        "data": "200712",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2007/12%20-%20Dezembro/VRA_200712.csv"
+    },
+    {
+        "data": "200801",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2008/01%20-%20Janeiro/VRA_20081.csv"
+    },
+    {
+        "data": "200802",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2008/02%20-%20Fevereiro/VRA_20082.csv"
+    },
+    {
+        "data": "200803",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2008/03%20-%20Mar%C3%A7o/VRA_20083.csv"
+    },
+    {
+        "data": "200804",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2008/04%20-%20Abril/VRA_20084.csv"
+    },
+    {
+        "data": "200805",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2008/05%20-%20Maio/VRA_20085.csv"
+    },
+    {
+        "data": "200806",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2008/06%20-%20Junho/VRA_20086.csv"
+    },
+    {
+        "data": "200807",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2008/07%20-%20Julho/VRA_20087.csv"
+    },
+    {
+        "data": "200808",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2008/08%20-%20Agosto/VRA_20088.csv"
+    },
+    {
+        "data": "200809",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2008/09%20-%20Setembro/VRA_20089.csv"
+    },
+    {
+        "data": "200810",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2008/10%20-%20Outubro/VRA_200810.csv"
+    },
+    {
+        "data": "200811",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2008/11%20-%20Novembro/VRA_200811.csv"
+    },
+    {
+        "data": "200812",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2008/12%20-%20Dezembro/VRA_200812.csv"
+    },
+    {
+        "data": "200901",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2009/01%20-%20Janeiro/VRA_20091.csv"
+    },
+    {
+        "data": "200902",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2009/02%20-%20Fevereiro/VRA_20092.csv"
+    },
+    {
+        "data": "200903",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2009/03%20-%20Mar%C3%A7o/VRA_20093.csv"
+    },
+    {
+        "data": "200904",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2009/04%20-%20Abril/VRA_20094.csv"
+    },
+    {
+        "data": "200905",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2009/05%20-%20Maio/VRA_20095.csv"
+    },
+    {
+        "data": "200906",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2009/06%20-%20Junho/VRA_20096.csv"
+    },
+    {
+        "data": "200907",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2009/07%20-%20Julho/VRA_20097.csv"
+    },
+    {
+        "data": "200908",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2009/08%20-%20Agosto/VRA_20098.csv"
+    },
+    {
+        "data": "200909",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2009/09%20-%20Setembro/VRA_20099.csv"
+    },
+    {
+        "data": "200910",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2009/10%20-%20Outubro/VRA_200910.csv"
+    },
+    {
+        "data": "200911",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2009/11%20-%20Novembro/VRA_200911.csv"
+    },
+    {
+        "data": "200912",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2009/12%20-%20Dezembro/VRA_200912.csv"
+    },
+    {
+        "data": "201001",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2010/01%20-%20Janeiro/VRA_20101.csv"
+    },
+    {
+        "data": "201002",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2010/02%20-%20Fevereiro/VRA_20102.csv"
+    },
+    {
+        "data": "201003",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2010/03%20-%20Mar%C3%A7o/VRA_20103.csv"
+    },
+    {
+        "data": "201004",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2010/04%20-%20Abril/VRA_20104.csv"
+    },
+    {
+        "data": "201005",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2010/05%20-%20Maio/VRA_20105.csv"
+    },
+    {
+        "data": "201006",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2010/06%20-%20Junho/VRA_20106.csv"
+    },
+    {
+        "data": "201007",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2010/07%20-%20Julho/VRA_20107.csv"
+    },
+    {
+        "data": "201008",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2010/08%20-%20Agosto/VRA_20108.csv"
+    },
+    {
+        "data": "201009",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2010/09%20-%20Setembro/VRA_20109.csv"
+    },
+    {
+        "data": "201010",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2010/10%20-%20Outubro/VRA_201010.csv"
+    },
+    {
+        "data": "201011",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2010/11%20-%20Novembro/VRA_201011.csv"
+    },
+    {
+        "data": "201012",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2010/12%20-%20Dezembro/VRA_201012.csv"
+    },
+    {
+        "data": "201101",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2011/01%20-%20Janeiro/VRA_20111.csv"
+    },
+    {
+        "data": "201102",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2011/02%20-%20Fevereiro/VRA_20112.csv"
+    },
+    {
+        "data": "201103",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2011/03%20-%20Mar%C3%A7o/VRA_20113.csv"
+    },
+    {
+        "data": "201104",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2011/04%20-%20Abril/VRA_20114.csv"
+    },
+    {
+        "data": "201105",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2011/05%20-%20Maio/VRA_20115.csv"
+    },
+    {
+        "data": "201106",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2011/06%20-%20Junho/VRA_20116.csv"
+    },
+    {
+        "data": "201107",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2011/07%20-%20Julho/VRA_20117.csv"
+    },
+    {
+        "data": "201108",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2011/08%20-%20Agosto/VRA_20118.csv"
+    },
+    {
+        "data": "201109",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2011/09%20-%20Setembro/VRA_20119.csv"
+    },
+    {
+        "data": "201110",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2011/10%20-%20Outubro/VRA_201110.csv"
+    },
+    {
+        "data": "201111",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2011/11%20-%20Novembro/VRA_201111.csv"
+    },
+    {
+        "data": "201112",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2011/12%20-%20Dezembro/VRA_201112.csv"
+    },
+    {
+        "data": "201201",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2012/01%20-%20Janeiro/VRA_20121.csv"
+    },
+    {
+        "data": "201202",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2012/02%20-%20Fevereiro/VRA_20122.csv"
+    },
+    {
+        "data": "201203",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2012/03%20-%20Mar%C3%A7o/VRA_20123.csv"
+    },
+    {
+        "data": "201204",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2012/04%20-%20Abril/VRA_20124.csv"
+    },
+    {
+        "data": "201205",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2012/05%20-%20Maio/VRA_20125.csv"
+    },
+    {
+        "data": "201206",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2012/06%20-%20Junho/VRA_20126.csv"
+    },
+    {
+        "data": "201207",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2012/07%20-%20Julho/VRA_20127.csv"
+    },
+    {
+        "data": "201208",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2012/08%20-%20Agosto/VRA_20128.csv"
+    },
+    {
+        "data": "201209",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2012/09%20-%20Setembro/VRA_20129.csv"
+    },
+    {
+        "data": "201210",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2012/10%20-%20Outubro/VRA_201210.csv"
+    },
+    {
+        "data": "201211",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2012/11%20-%20Novembro/VRA_201211.csv"
+    },
+    {
+        "data": "201212",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2012/12%20-%20Dezembro/VRA_201212.csv"
+    },
+    {
+        "data": "201301",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2013/01%20-%20Janeiro/VRA_20131.csv"
+    },
+    {
+        "data": "201302",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2013/02%20-%20Fevereiro/VRA_20132.csv"
+    },
+    {
+        "data": "201303",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2013/03%20-%20Mar%C3%A7o/VRA_20133.csv"
+    },
+    {
+        "data": "201304",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2013/04%20-%20Abril/VRA_20134.csv"
+    },
+    {
+        "data": "201305",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2013/05%20-%20Maio/VRA_20135.csv"
+    },
+    {
+        "data": "201306",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2013/06%20-%20Junho/VRA_20136.csv"
+    },
+    {
+        "data": "201307",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2013/07%20-%20Julho/VRA_20137.csv"
+    },
+    {
+        "data": "201308",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2013/08%20-%20Agosto/VRA_20138.csv"
+    },
+    {
+        "data": "201309",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2013/09%20-%20Setembro/VRA_20139.csv"
+    },
+    {
+        "data": "201310",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2013/10%20-%20Outubro/VRA_201310.csv"
+    },
+    {
+        "data": "201311",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2013/11%20-%20Novembro/VRA_201311.csv"
+    },
+    {
+        "data": "201312",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2013/12%20-%20Dezembro/VRA_201312.csv"
+    },
+    {
+        "data": "201401",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2014/01%20-%20Janeiro/VRA_20141.csv"
+    },
+    {
+        "data": "201402",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2014/02%20-%20Fevereiro/VRA_20142.csv"
+    },
+    {
+        "data": "201403",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2014/03%20-%20Mar%C3%A7o/VRA_20143.csv"
+    },
+    {
+        "data": "201404",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2014/04%20-%20Abril/VRA_20144.csv"
+    },
+    {
+        "data": "201405",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2014/05%20-%20Maio/VRA_20145.csv"
+    },
+    {
+        "data": "201408",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2014/08%20-%20Agosto/VRA_20148.csv"
+    },
+    {
+        "data": "201409",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2014/09%20-%20Setembro/VRA_20149.csv"
+    },
+    {
+        "data": "201410",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2014/10%20-%20Outubro/VRA_201410.csv"
+    },
+    {
+        "data": "201411",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2014/11%20-%20Novembro/VRA_201411.csv"
+    },
+    {
+        "data": "201412",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2014/12%20-%20Dezembro/VRA_201412.csv"
+    },
+    {
+        "data": "201501",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2015/01%20-%20Janeiro/VRA_20151.csv"
+    },
+    {
+        "data": "201502",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2015/02%20-%20Fevereiro/VRA_20152.csv"
+    },
+    {
+        "data": "201503",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2015/03%20-%20Mar%C3%A7o/VRA_20153.csv"
+    },
+    {
+        "data": "201504",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2015/04%20-%20Abril/VRA_20154.csv"
+    },
+    {
+        "data": "201505",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2015/05%20-%20Maio/VRA_20155.csv"
+    },
+    {
+        "data": "201506",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2015/06%20-%20Junho/VRA_20156.csv"
+    },
+    {
+        "data": "201507",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2015/07%20-%20Julho/VRA_20157.csv"
+    },
+    {
+        "data": "201508",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2015/08%20-%20Agosto/VRA_20158.csv"
+    },
+    {
+        "data": "201509",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2015/09%20-%20Setembro/VRA_20159.csv"
+    },
+    {
+        "data": "201510",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2015/10%20-%20Outubro/VRA_201510.csv"
+    },
+    {
+        "data": "201511",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2015/11%20-%20Novembro/VRA_201511.csv"
+    },
+    {
+        "data": "201512",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2015/12%20-%20Dezembro/VRA_201512.csv"
+    },
+    {
+        "data": "201601",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2016/01%20-%20Janeiro/VRA_20161.csv"
+    },
+    {
+        "data": "201602",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2016/02%20-%20Fevereiro/VRA_20162.csv"
+    },
+    {
+        "data": "201603",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2016/03%20-%20Mar%C3%A7o/VRA_20163.csv"
+    },
+    {
+        "data": "201604",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2016/04%20-%20Abril/VRA_20164.csv"
+    },
+    {
+        "data": "201605",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2016/05%20-%20Maio/VRA_20165.csv"
+    },
+    {
+        "data": "201606",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2016/06%20-%20Junho/VRA_20166.csv"
+    },
+    {
+        "data": "201607",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2016/07%20-%20Julho/VRA_20167.csv"
+    },
+    {
+        "data": "201608",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2016/08%20-%20Agosto/VRA_20168.csv"
+    },
+    {
+        "data": "201609",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2016/09%20-%20Setembro/VRA_20169.csv"
+    },
+    {
+        "data": "201610",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2016/10%20-%20Outubro/VRA_201610.csv"
+    },
+    {
+        "data": "201611",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2016/11%20-%20Novembro/VRA_201611.csv"
+    },
+    {
+        "data": "201612",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2016/12%20-%20Dezembro/VRA_201612.csv"
+    },
+    {
+        "data": "201701",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2017/01%20-%20Janeiro/VRA_20171.csv"
+    },
+    {
+        "data": "201702",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2017/02%20-%20Fevereiro/VRA_20172.csv"
+    },
+    {
+        "data": "201703",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2017/03%20-%20Mar%C3%A7o/VRA_20173.csv"
+    },
+    {
+        "data": "201704",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2017/04%20-%20Abril/VRA_20174.csv"
+    },
+    {
+        "data": "201705",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2017/05%20-%20Maio/VRA_20175.csv"
+    },
+    {
+        "data": "201706",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2017/06%20-%20Junho/VRA_20176.csv"
+    },
+    {
+        "data": "201707",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2017/07%20-%20Julho/VRA_20177.csv"
+    },
+    {
+        "data": "201708",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2017/08%20-%20Agosto/VRA_20178.csv"
+    },
+    {
+        "data": "201709",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2017/09%20-%20Setembro/VRA_20179.csv"
+    },
+    {
+        "data": "201710",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2017/10%20-%20Outubro/VRA_201710.csv"
+    },
+    {
+        "data": "201711",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2017/11%20-%20Novembro/VRA_201711.csv"
+    },
+    {
+        "data": "201712",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2017/12%20-%20Dezembro/VRA_201712.csv"
+    },
+    {
+        "data": "201801",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2018/01%20-%20Janeiro/VRA_20181.csv"
+    },
+    {
+        "data": "201802",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2018/02%20-%20Fevereiro/VRA_20182.csv"
+    },
+    {
+        "data": "201803",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2018/03%20-%20Mar%C3%A7o/VRA_20183.csv"
+    },
+    {
+        "data": "201804",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2018/04%20-%20Abril/VRA_20184.csv"
+    },
+    {
+        "data": "201805",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2018/05%20-%20Maio/VRA_20185.csv"
+    },
+    {
+        "data": "201806",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2018/06%20-%20Junho/VRA_20186.csv"
+    },
+    {
+        "data": "201807",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2018/07%20-%20Julho/VRA_20187.csv"
+    },
+    {
+        "data": "201808",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2018/08%20-%20Agosto/VRA_20188.csv"
+    },
+    {
+        "data": "201809",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2018/09%20-%20Setembro/VRA_20189.csv"
+    },
+    {
+        "data": "201810",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2018/10%20-%20Outubro/VRA_201810.csv"
+    },
+    {
+        "data": "201811",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2018/11%20-%20Novembro/VRA_201811.csv"
+    },
+    {
+        "data": "201812",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2018/12%20-%20Dezembro/VRA_201812.csv"
+    },
+    {
+        "data": "201901",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2019/01%20-%20Janeiro/VRA_20191.csv"
+    },
+    {
+        "data": "201902",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2019/02%20-%20Fevereiro/VRA_20192.csv"
+    },
+    {
+        "data": "201903",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2019/03%20-%20Mar%C3%A7o/VRA_20193.csv"
+    },
+    {
+        "data": "201904",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2019/04%20-%20Abril/VRA_20194.csv"
+    },
+    {
+        "data": "201905",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2019/05%20-%20Maio/VRA_20195.csv"
+    },
+    {
+        "data": "201906",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2019/06%20-%20Junho/VRA_20196.csv"
+    },
+    {
+        "data": "201907",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2019/07%20-%20Julho/VRA_20197.csv"
+    },
+    {
+        "data": "201908",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2019/08%20-%20Agosto/VRA_20198.csv"
+    },
+    {
+        "data": "201909",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2019/09%20-%20Setembro/VRA_20199.csv"
+    },
+    {
+        "data": "201910",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2019/10%20-%20Outubro/VRA_201910.csv"
+    },
+    {
+        "data": "201911",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2019/11%20-%20Novembro/VRA_201911.csv"
+    },
+    {
+        "data": "201912",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2019/12%20-%20Dezembro/VRA_201912.csv"
+    },
+    {
+        "data": "202001",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2020/01%20-%20Janeiro/VRA_20201.csv"
+    },
+    {
+        "data": "202002",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2020/02%20-%20Fevereiro/VRA_20202.csv"
+    },
+    {
+        "data": "202003",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2020/03%20-%20Mar%C3%A7o/VRA_20203.csv"
+    },
+    {
+        "data": "202004",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2020/04%20-%20Abril/VRA_20204.csv"
+    },
+    {
+        "data": "202005",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2020/05%20-%20Maio/VRA_20205.csv"
+    },
+    {
+        "data": "202006",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2020/06%20-%20Junho/VRA_20206.csv"
+    },
+    {
+        "data": "202007",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2020/07%20-%20Julho/VRA_20207.csv"
+    },
+    {
+        "data": "202008",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2020/08%20-%20Agosto/VRA_20208.csv"
+    },
+    {
+        "data": "202009",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2020/09%20-%20Setembro/VRA_20209.csv"
+    },
+    {
+        "data": "202010",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2020/10%20-%20Outubro/VRA_202010.csv"
+    },
+    {
+        "data": "202011",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2020/11%20-%20Novembro/VRA_202011.csv"
+    },
+    {
+        "data": "202012",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2020/12%20-%20Dezembro/VRA_202012.csv"
+    },
+    {
+        "data": "202101",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2021/01%20-%20Janeiro/VRA_20211.csv"
+    },
+    {
+        "data": "202102",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2021/02%20-%20Fevereiro/VRA_20212.csv"
+    },
+    {
+        "data": "202103",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2021/03%20-%20Mar%C3%A7o/VRA_20213.csv"
+    },
+    {
+        "data": "202104",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2021/04%20-%20Abril/VRA_20214.csv"
+    },
+    {
+        "data": "202105",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2021/05%20-%20Maio/VRA_20215.csv"
+    },
+    {
+        "data": "202106",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2021/06%20-%20Junho/VRA_20216.csv"
+    },
+    {
+        "data": "202107",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2021/07%20-%20Julho/VRA_20217.csv"
+    },
+    {
+        "data": "202108",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2021/08%20-%20Agosto/VRA_20218.csv"
+    },
+    {
+        "data": "202109",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2021/09%20-%20Setembro/VRA_20219.csv"
+    },
+    {
+        "data": "202110",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2021/10%20-%20Outubro/VRA_202110.csv"
+    },
+    {
+        "data": "202111",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2021/11%20-%20Novembro/VRA_202111.csv"
+    },
+    {
+        "data": "202112",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2021/12%20-%20Dezembro/VRA_202112.csv"
+    },
+    {
+        "data": "202201",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2022/01%20-%20Janeiro/VRA_20221.csv"
+    },
+    {
+        "data": "202202",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2022/02%20-%20Fevereiro/VRA_20222.csv"
+    },
+    {
+        "data": "202203",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2022/03%20-%20Mar%C3%A7o/VRA_20223.csv"
+    },
+    {
+        "data": "202204",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2022/04%20-%20Abril/VRA_20224.csv"
+    },
+    {
+        "data": "202206",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2022/06%20-%20Junho/VRA_20226.csv"
+    },
+    {
+        "data": "202207",
+        "link": "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/2022/07%20-%20Julho/VRA_20227.csv"
+    }
+]
