@@ -4,14 +4,17 @@ import json
 from bs4 import BeautifulSoup
 
 
-#### Busca dados abertos da ANAC sobre Voos Regulares Ativos ###
-
+''' Busca dados abertos da ANAC sobre Voos Regulares Ativos '''
 
 # URL dos Dados
-url = 'https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Voo%20Regular%20Ativo%20%28VRA%29/'
+url = (
+    'https://sistemas.anac.gov.br/dadosabertos/'
+    'Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/'
+    'Voo%20Regular%20Ativo%20%28VRA%29/'
+)
 
 # Regex para pegar soment os links dos anos
-pattern_ano = re.compile("^\d{4}/$") # '2022/' -> ok
+pattern_ano = re.compile(r'^\d{4}/$')  # '2022/' -> ok
 
 # Busca pagina
 page = urllib.request.urlopen(url)
@@ -32,7 +35,7 @@ for link in soup.find_all('a'):
         )
 
 # Pega os links dos meses de todos os anos disponiveis
-pattern_mes = re.compile("^\d{2}\s-\s\w+/$") # '01 - Janeiro/' -> ok
+pattern_mes = re.compile(r'^\d{2}\s-\s\w+/$')  # '01 - Janeiro/' -> ok
 
 links_mes = []
 for item in links_ano:
@@ -63,11 +66,16 @@ for item in links_mes:
 
         # Verifica se arquivo é um CSV
         if href.find('.csv') != -1:
-            # Transforma data de 202201 para 20221 - datas no CSVs não tem 0 nos meses
-            data_mes_sem_zeros = item['data'][0:4] + item['data'][-2:].replace('0', '') 
+            # Transforma data de 202201 para 20221
+            # datas no CSVs não tem 0 nos meses
+            data_mes_sem_zeros = (
+                item['data'][0:4] +
+                item['data'][-2:].replace('0', '')
+            )
 
             # Verifica se a data do CSVs é igual a data esperada
-            if (href.find(item['data']) != -1 or href.find(data_mes_sem_zeros) != -1): 
+            if (href.find(item['data']) != -1 or
+                    href.find(data_mes_sem_zeros) != -1):
                 links_csv.append(
                     {
                         'data': item['data'],
@@ -79,4 +87,3 @@ for item in links_mes:
 saida = open('lista_vra.json', 'w', encoding='latin-1')
 saida.write(json.dumps(links_csv))
 saida.close()
-
