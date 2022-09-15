@@ -26,12 +26,12 @@ lista_final_vra = []
 # Busca lista com os links
 try:
     lista_vra_arquivo = open('lista_vra.json', 'r', encoding='latin-1')
-except FileNotFoundError as e:
+except FileNotFoundError:
     print('Lista de arquivo do VRA não encontrato')
     sys.exit(-1)
 else:
     lista_vra_string = lista_vra_arquivo.read()
-    
+
     # Trata arquivo vazio
     if lista_vra_string is not None:
         lista_vra = json.loads(lista_vra_string)
@@ -43,7 +43,9 @@ else:
 # Busca lista dos arquivos que
 # já foram baixados
 try:
-    lista_vra_baixados_arquivo = open('lista_vra_baixados.json', 'r', encoding='latin-1')
+    lista_vra_baixados_arquivo = open(
+        'lista_vra_baixados.json', 'r', encoding='latin-1'
+    )
 
 except FileNotFoundError:
     pass  # contina processamento com uma lista vazia
@@ -85,16 +87,18 @@ try:
             )
         )
 
-        #adiciona arquivo na lista de baixados
+        # Adiciona arquivo na lista de baixados
         lista_vra_baixados.append(arquivo)
-    
+
 except BaseException as e:
     print('Falha no download: {0}'.format(e))
 
 finally:
     # Trata lista vazia
     if len(lista_vra_baixados) > 0:
-        lista_vra_baixados_arquivo = open('lista_vra_baixados.json', 'w', encoding='latin-1')
+        lista_vra_baixados_arquivo = open(
+            'lista_vra_baixados.json', 'w', encoding='latin-1'
+        )
         lista_vra_baixados_arquivo.write(json.dumps(lista_vra_baixados))
         lista_vra_baixados_arquivo.close()
 

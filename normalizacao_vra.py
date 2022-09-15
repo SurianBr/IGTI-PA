@@ -1,5 +1,3 @@
-from copy import copy
-from email import message
 import os
 import json
 import sys
@@ -20,7 +18,8 @@ colunas_esperadas_arquivo.close()
 
 def normaliza_df(df_pandas):
     '''
-        Normaliza as colunas de um DF pandas utilizando uma lista de colunas esperadas.
+        Normaliza as colunas de um DF pandas utilizando uma lista de colunas
+        esperadas.
 
         Se a coluna esperada estiver no DF Pandas:
             Altera o nome da coluna para o nome final
@@ -32,7 +31,8 @@ def normaliza_df(df_pandas):
             Para normalização
 
         Parametros:
-            df_pandas (Dataframe Pandas): Dataframe Pandas do arquivo a ser normalizado
+            df_pandas (Dataframe Pandas): Dataframe Pandas do arquivo a
+            ser normalizado.
 
         Retorno:
             Codigo processamento (int)
@@ -43,14 +43,16 @@ def normaliza_df(df_pandas):
                 Retorna dataframe pandas normalizado
 
             Codigo processamento = -1:
-                Processamento com falha. Não encontrou alguna coluna esperada no dataframe pandas
-                Retorna uma string com o nome da coluna esperada que não foi encontrada
-            
+                Processamento com falha. Não encontrou alguna coluna
+                esperada no dataframe pandas.
+                Retorna uma string com o nome da coluna esperada que não foi
+                encontrada.
     '''
     # pega lista de colunas no df pandas
     colunas = df_pandas.columns.values.tolist()
 
-    # Gera uma lista com o nome da coluna no df pandas x o nome da coluna no arquivo final
+    # Gera uma lista com o nome da coluna no df
+    # pandas x o nome da coluna no arquivo final
     lista_colunas_de_para = []
 
     # Passa por cada coluna do df pandas
@@ -64,17 +66,19 @@ def normaliza_df(df_pandas):
         for coluna_esperada in colunas_esperadas['colunas']:
             for nome_coluna_possivel in coluna_esperada['nome_colunas_possiveis']:
                 if nome_coluna_arquivo == nome_coluna_possivel:
-                    de_para_coluna['nome_final'] = coluna_esperada['nome_final']
+                    de_para_coluna['nome_final'] = (
+                        coluna_esperada['nome_final']
+                    )
                     de_para_coluna['nome_arquivo'] = nome_coluna_arquivo
 
                     lista_colunas_de_para.append(de_para_coluna)
                     coluna_encontrada = True
                     break
-            
+
             # Pula para a proxima coluna do df pandas
             if coluna_encontrada is True:
                 break
-    
+
     # Verifica se encontrou todas as colunas esperadas
     if len(lista_colunas_de_para) != len(colunas_esperadas['colunas']):
 
@@ -83,7 +87,8 @@ def normaliza_df(df_pandas):
         for coluna_esperada in colunas_esperadas['colunas']:
             encontrada = False
             for coluna_encontrada in lista_colunas_de_para:
-                if coluna_encontrada['nome_final'] == coluna_esperada['nome_final']:
+                if (coluna_encontrada['nome_final'] ==
+                        coluna_esperada['nome_final']):
                     encontrada = True
 
             if encontrada is False:
@@ -104,7 +109,6 @@ def normaliza_df(df_pandas):
         de_para_colunas[coluna['nome_arquivo']] = coluna['nome_final']
         lista_colunas_final.append(coluna['nome_final'])
 
-
     # Renomeia as colunas
     df_pandas_nome_colunas = df_pandas.rename(columns=de_para_colunas)
 
@@ -112,9 +116,12 @@ def normaliza_df(df_pandas):
     df_pandas_colunas_final = df_pandas_nome_colunas[lista_colunas_final]
 
     # Força tipo string para algumas colunas
-    df_pandas_final = df_pandas_colunas_final.astype({'numero_voo': 'string', 'codigo_autorizacao': 'string'})
+    df_pandas_final = df_pandas_colunas_final.astype(
+        {'numero_voo': 'string', 'codigo_autorizacao': 'string'}
+    )
 
     return 0, df_pandas_final
+
 
 # Busca caminho absoluto
 caminho_absoluto = os.path.abspath('arquivos/raw/vra/')
@@ -130,13 +137,18 @@ for arquivo in lista_arquivos:
 
     # Gera df pandas do csv - elimina a primeira linha (data de geração) e
     # utiliza a segunda linha para o nome das colunas
-    df_pandas = pandas.read_csv(caminho_absoluto + arquivo, sep=';', skiprows=1, header=0)
+    df_pandas = pandas.read_csv(
+        caminho_absoluto + arquivo,
+        sep=';',
+        skiprows=1,
+        header=0
+    )
 
     # Normaliza
     codigo, retorno = normaliza_df(df_pandas)
 
     # Trata retorno da normalização
-    if codigo ==  -1:
+    if codigo == -1:
         print('Erro na normalização')
         print(retorno)
         print('Colunas Encontradas: \n{0}'.format(
