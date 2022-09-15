@@ -1,0 +1,88 @@
+{
+    "colunas": [
+        {
+            "nome_final": "icao_empresa_aerea",
+            "nome_colunas_possiveis" : [
+                "ICAOEmpresaAérea",
+                "ICAO Empresa Aérea"
+            ]
+        },
+        {
+            "nome_final": "numero_voo",
+            "nome_colunas_possiveis" : [
+                "NúmeroVoo",
+                "Número Voo"
+            ]
+        },
+        {
+            "nome_final": "codigo_autorizacao",
+            "nome_colunas_possiveis" : [
+                "CódigoAutorizaçãoDI",
+                "Código Autorização (DI)"
+            ]
+        },
+        {
+            "nome_final": "codigo_tipo_linha",
+            "nome_colunas_possiveis" : [
+                "CódigoTipoLinha",
+                "Código Tipo Linha"
+            ]
+        },
+        {
+            "nome_final": "icao_aerodromo_origem",
+            "nome_colunas_possiveis" : [
+                "ICAOAeródromoOrigem",
+                "ICAO Aeródromo Origem"
+            ]
+        },
+        {
+            "nome_final": "icao_aerodromo_destino",
+            "nome_colunas_possiveis" : [
+                "ICAOAeródromooDestino",
+                "ICAO Aeródromo Destino"
+            ]
+        },
+        {
+            "nome_final": "data_partida_prevista",
+            "nome_colunas_possiveis" : [
+                "PartidaPrevista",
+                "Partida Prevista"
+            ]
+        },
+        {
+            "nome_final": "data_partida_real",
+            "nome_colunas_possiveis" : [
+                "PartidaReal",
+                "Partida Real"
+            ]
+        },
+        {
+            "nome_final": "data_chegada_prevista",
+            "nome_colunas_possiveis" : [
+                "ChegadaPrevista",
+                "Chegada Prevista"
+            ]
+        },
+        {
+            "nome_final": "data_chegada_real",
+            "nome_colunas_possiveis" : [
+                "ChegadaReal",
+                "Chegada Real"
+            ]
+        },
+        {
+            "nome_final": "situacao_voo",
+            "nome_colunas_possiveis" : [
+                "SituaçãoVoo",
+                "Situação Voo"
+            ]
+        },
+        {
+            "nome_final": "codigo_justificativa",
+            "nome_colunas_possiveis" : [
+                "CódigoJustificativa",
+                "Código Justificativa"
+            ]
+        }
+    ]
+}
