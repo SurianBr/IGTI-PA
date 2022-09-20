@@ -2,6 +2,7 @@ import os
 import json
 import sys
 import pandas
+from pathlib import Path
 
 '''
     Normaliza os arquivo CSV e grava em parquet
@@ -130,6 +131,12 @@ caminho_absoluto = caminho_absoluto.replace('\\', '/') + '/'
 # Busca lista de arquivos
 lista_arquivos = os.listdir(caminho_absoluto)
 
+# Onde os arquivos serão gravados
+caminho = 'arquivos/har/vra/'
+
+# Cria as pastas se não existir
+Path(caminho).mkdir(parents=True, exist_ok=True)
+
 # Normalização dos arquivos em csv e gravação em parquet
 for arquivo in lista_arquivos:
 
@@ -159,5 +166,8 @@ for arquivo in lista_arquivos:
 
     novo_nome_arquivo = '{0}.snappy.parquet'.format(arquivo[:-4])
 
+    # Adiciona coluna com o nome do arquivo de origem
+    retorno['arquivo_origem'] = arquivo
+
     # Grava parquet
-    retorno.to_parquet('arquivos/har/vra/{0}'.format(novo_nome_arquivo))
+    retorno.to_parquet(caminho + '{0}'.format(novo_nome_arquivo))

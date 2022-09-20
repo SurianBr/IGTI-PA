@@ -1,6 +1,7 @@
 import sys
 import urllib.request
 import json
+from pathlib import Path
 
 '''
     Faz o download dos arquivos de Voos Regulares Ativos
@@ -9,6 +10,9 @@ import json
 
 # Onde os arquivos serão baixados
 caminho = 'arquivos/raw/vra/'
+
+# Cria pastas se não existir
+Path(caminho).mkdir(parents=True, exist_ok=True)
 
 # Arquivos das listas
 lista_vra_arquivo = None

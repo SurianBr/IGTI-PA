@@ -1,0 +1,70 @@
+{
+    "colunas": [
+        {
+            "nome_final": "id",
+            "nome_colunas_possiveis" : [
+                "id"
+            ]
+        },
+        {
+            "nome_final": "icao",
+            "nome_colunas_possiveis" : [
+                "ident"
+            ]
+        },
+        {
+            "nome_final": "iata",
+            "nome_colunas_possiveis" : [
+                "iata_code"
+            ]
+        },
+        {
+            "nome_final": "nome",
+            "nome_colunas_possiveis" : [
+                "name"
+            ]
+        },
+        {
+            "nome_final": "continente",
+            "nome_colunas_possiveis" : [
+                "continent"
+            ]
+        },
+        {
+            "nome_final": "pais_iso",
+            "nome_colunas_possiveis" : [
+                "iso_country"
+            ]
+        },
+        {
+            "nome_final": "regiao_iso",
+            "nome_colunas_possiveis" : [
+                "iso_region"
+            ]
+        },
+        {
+            "nome_final": "municipio",
+            "nome_colunas_possiveis" : [
+                "municipality"
+            ]
+        },
+        {
+            "nome_final": "latitude_graus",
+            "nome_colunas_possiveis" : [
+                "latitude_deg"
+            ]
+        },
+        {
+            "nome_final": "longitude_graus",
+            "nome_colunas_possiveis" : [
+                "longitude_deg"
+            ]
+        },
+        {
+            "nome_final": "elevacao_pes",
+            "nome_colunas_possiveis" : [
+                "elevation_ft"
+            ]
+        }
+    ]
+}
