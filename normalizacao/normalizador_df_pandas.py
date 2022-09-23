@@ -1,7 +1,7 @@
 import json
 import pandas
 
-class Normalizador_df():
+class Normalizador_df_pandas():
 
     colunas_esperadas = None
 

@@ -1,13 +1,13 @@
 import sys
 import pandas
 from pathlib import Path
-from Normalizador_df import Normalizador_df
+from normalizador_df_pandas import Normalizador_df_pandas
 
 '''
     Normaliza o CSV de aerodromos
 '''
 # prepara normalizador
-normalizador_df = Normalizador_df('colunas_aerodromos.json')
+normalizador = Normalizador_df_pandas('normalizacao/colunas/colunas_aerodromos.json')
 
 # Caminhos arquivos
 caminho_entrada = 'arquivos/raw/aerodromos/aerodromos.csv'
@@ -24,7 +24,7 @@ df_pandas = pandas.read_csv(
 )
 
 # Normaliza
-codigo, retorno = normalizador_df.normalizar(df_pandas)
+codigo, retorno = normalizador.normalizar(df_pandas)
 
 # Trata retorno da normalização
 if codigo == -1:

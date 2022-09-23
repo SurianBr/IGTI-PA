@@ -2,7 +2,7 @@ import pandas
 from pathlib import Path
 
 '''
-    Tratos os dados de Voos Regulares ativos elimando incosistencias
+    Tratos os dados de Voos Regulares Ativos elimando inconsistencias
 '''
 
 # Carrega base inteira
