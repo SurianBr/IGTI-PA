@@ -1,4 +1,5 @@
 
+from asyncore import read
 import cgi
 import socketserver
 from http.server import BaseHTTPRequestHandler
@@ -14,6 +15,9 @@ class Controlador(BaseHTTPRequestHandler):
 
         self.prepara_bases()
         self.prepara_paginas()
+
+        # Inicializa variaveis
+        self.favicon = None
 
         super().__init__(request, client_address, server)
 
@@ -48,6 +52,9 @@ class Controlador(BaseHTTPRequestHandler):
         '''
         caminho = self.path
 
+        if (caminho.endswith('favicon.ico')):
+            self.processa_get_favicon()
+
         if (caminho.endswith('/')):
             self.processa_get_home_page()
         
@@ -72,6 +79,22 @@ class Controlador(BaseHTTPRequestHandler):
         self.wfile.write('Hello World'.encode())
 
         ctypes, pdict = cgi.parse_header(self.headers.get('content-type'))
+
+
+    def processa_get_favicon(self):
+        '''
+            Processa requisicoes get para o favicon
+        '''
+        if self.favicon  == None:
+            self.favicon = open('favicon.ico', 'rb')
+
+        self.send_response(200)
+        self.send_header('content-type', 'image/jpeg')
+        self.end_headers()
+        self.wfile.write(self.favicon.read())
+
+        self.favicon.seek(0)
+
 
 
 

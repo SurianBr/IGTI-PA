@@ -12,7 +12,7 @@ class Paginas():
         a('<!DOCTYPE html>')
         with a.html(lang='en'):
             with a.head():
-                a.title(_t='W3.CSS Template')
+                a.title(_t='Voo Regular Ativo')
                 a.meta(charset='UTF-8')
                 a.meta(content='width=device-width, initial-scale=1', name='viewport')
                 a.link(href='https://www.w3schools.com/w3css/4/w3.css', rel='stylesheet')
@@ -73,11 +73,11 @@ class Paginas():
 
         # Coloca os dados no script
         script_voos_ano_string = script_voos_ano_string.replace(
-            '|x|',
+            '|x_total_voos|',
             eixo_x
         )
         script_voos_ano_string = script_voos_ano_string.replace(
-            '|y|',
+            '|y_total_voos|',
             eixo_y
         )
         
@@ -92,19 +92,13 @@ class Paginas():
                 )
 
         a('<!-- First Grid -->')
-        with a.div(klass='w3-row-padding w3-padding-64 w3-container'):
-            with a.div(klass='w3-content'):
-                with a.div(klass='w3-twothird'):
-                    a.div(id='tester', style='width:600px;height:250px;')
-                    with a.script():
-                        a(script_voos_ano_string)
-                    a.h1(_t='Lorem Ipsum')
-                    with a.h5(klass='w3-padding-32'):
-                        a('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.')
-                    with a.p(klass='w3-text-grey'):
-                        a('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint\n        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco\n        laboris nisi ut aliquip ex ea commodo consequat.')
-                with a.div(klass='w3-third w3-center'):
-                    a.i(klass='fa fa-anchor w3-padding-64 w3-text-red')
+        with a.div(klass='w3-container w3-center w3-padding-64'):
+            with a.p(klass='w3-large'):
+                a('Número de voos realizados desde janeiro de 2000')
+        with a.div(klass='w3-container'):
+            with a.div(id='tester', klass='w3-auto'):
+                with a.script():
+                    a(script_voos_ano_string)
         return a
 
 
