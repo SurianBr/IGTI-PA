@@ -1,3 +1,4 @@
+import re
 from pyspark.sql import SparkSession
 
 class Bases():
@@ -7,8 +8,12 @@ class Bases():
 
     def __init__(self) -> None:
 
+        # Prepara variaveis
+        self.favicon = None
+        self.dados_home = None
+
         # Prepara sessao
-        self.spark = SparkSession.builder.appName("processa_querys").getOrCreate()
+        self.spark = SparkSession.builder.appName("bases").getOrCreate()
 
         # Carrega bases
         self.vra = self.spark.read.parquet('arquivos/res/vra/vra_final.snappy.parquet')
@@ -16,6 +21,15 @@ class Bases():
 
         self.aerodromos = self.spark.read.parquet('arquivos/har/aerodromos/aerodromos.snappy.parquet')
         self.aerodromos.createOrReplaceTempView('aerodromos')
+
+
+    def busca_favicon(self):
+        if self.favicon is None:
+            self.favicon = open('favicon.ico', 'rb')
+        else:
+            self.favicon.seek(0)
+
+        return self.favicon.read()
 
 
     def executar_query(self, query):
@@ -50,12 +64,52 @@ class Bases():
             return codigo, mensagem, None
 
 
-    def gerar_dados_home_page(self):
+    def busca_dados_home_page(self):
         '''
             Gera os dados necessarios para popular a home page
 
             Retono:
-                Dados (Dataframe Spark): Dataframe com os dados para a home page
+                Dados (Lista): Lista de dataframes com os dados para a home page
+                    Posição:
+                        0: Numero total de voos
+                        1: Numero total de voos por ano
+        '''
+
+        if self.dados_home is None:
+
+            self.dados_home = []
+            
+            self.dados_home.append(self.gerar_dados_home_page_total_voos())
+            self.dados_home.append(self.gerar_dados_home_page_voos_ano())
+
+        return self.dados_home 
+
+
+    def gerar_dados_home_page_total_voos(self):
+        '''
+            Gera os dado com o total de voos para a home page
+            Retono:
+                Dados (Dataframe Spark)
+        '''
+        
+        query = (
+            ' SELECT COUNT(1) as quantidade_voos'
+            ' FROM vra'
+        )
+        codigo, mensagem, df = self.executar_query(query)
+
+        if codigo == 0:
+            return df
+        
+        else:
+            raise Exception(mensagem)
+
+
+    def gerar_dados_home_page_voos_ano(self):
+        '''
+            Gera os dados de voos por ano para a home page
+            Retono:
+                Dados (Dataframe Spark)
         '''
         
         query = (

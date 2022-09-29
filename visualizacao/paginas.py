@@ -3,8 +3,28 @@ from airium import Airium
 class Paginas():
 
     def __init__(self) -> None:
-        pass
         
+        # prepara variaveis
+        self.home_page = None
+    
+
+    def get_home_page(self, dados):
+        '''
+            Monta home page
+        '''
+
+        if self.home_page is None:
+
+            self.home_page = self.get_pagina_vazia()
+
+            self.home_page.body(
+                self.get_barra_navegacao(),
+                self.get_body_home(dados),
+                self.get_rodape()
+            )
+
+        return self.home_page
+
 
     def get_pagina_vazia(self):
         a = Airium()
@@ -66,10 +86,16 @@ class Paginas():
         script_voos_ano.close()
 
         # Prepara dados
-        dados_dict = dados.toPandas().to_dict(orient='list')
+        # Total de voos
+        total_voos = dados[0].toPandas().to_dict(orient='list')['quantidade_voos'][0]
+        print(total_voos)
+        total_voos = format(total_voos, ',')
 
-        eixo_x = str(dados_dict['ano_voo']).replace('\'', '')
-        eixo_y = str(dados_dict['quantidade_voos']).replace('\'', '')
+        # voos por ano
+        dados_voos_ano_dict = dados[1].toPandas().to_dict(orient='list')
+
+        eixo_x = str(dados_voos_ano_dict['ano_voo']).replace('\'', '')
+        eixo_y = str(dados_voos_ano_dict['quantidade_voos']).replace('\'', '')
 
         # Coloca os dados no script
         script_voos_ano_string = script_voos_ano_string.replace(
@@ -82,7 +108,7 @@ class Paginas():
         )
         
         a('<!-- Header -->')
-        with a.header(klass='w3-container w3-blue w3-center', style='padding:128px 16px'):
+        with a.header(klass='w3-container w3-blue w3-center w3-padding-32'):
             a.h1(klass='w3-margin w3-jumbo', _t='Voo Regular Ativo')
 
             with a.p(klass='w3-xlarge'):
@@ -91,14 +117,24 @@ class Paginas():
                     'realizados no espaço aéreo brasileiro.'
                 )
 
-        a('<!-- First Grid -->')
-        with a.div(klass='w3-container w3-center w3-padding-64'):
-            with a.p(klass='w3-large'):
-                a('Número de voos realizados desde janeiro de 2000')
-        with a.div(klass='w3-container'):
-            with a.div(id='tester', klass='w3-auto'):
-                with a.script():
-                    a(script_voos_ano_string)
+        a('<!-- Total Voos -->')
+        with a.div(klass='w3-container w3-center w3-padding'):
+            with a.div(klass='w3-container w3-center'):
+                with a.p(klass='w3-large'):
+                    a('Quantidade de Voos na base de dados:')
+            with a.div(klass='w3-container w3-center'):
+                with a.p(klass='w3-xxxlarge'):
+                    a(total_voos)
+
+        a('<!-- Voos por ano -->')
+        with a.div(klass='w3-container w3-center w3-padding w3-light-grey'):
+            with a.div(klass='w3-container w3-center w3-padding-small'):
+                with a.p(klass='w3-large'):
+                    a('Voos realizados por ano:')
+            with a.div(klass='w3-container w3-center w3-padding-small'):
+                with a.div(id='tester', klass='w3-auto'):
+                    with a.script():
+                        a(script_voos_ano_string)
         return a
 
 
@@ -106,8 +142,8 @@ class Paginas():
         a = Airium()
         
         a('<!-- Footer -->')
-        with a.footer(klass='w3-container w3-blue w3-padding-64 w3-center'):
-            a.div(klass='w3-xlarge w3-padding-32')
+        with a.footer(klass='w3-container w3-blue w3-center w3-padding'):
+            a.div(klass='w3-xlarge w3-padding')
             with a.p():
                 a('Powered by')
                 a.a(href='https://www.w3schools.com/w3css/default.asp', target='_blank', _t='w3.css')
