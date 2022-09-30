@@ -88,7 +88,6 @@ class Paginas():
         # Prepara dados
         # Total de voos
         total_voos = dados[0].toPandas().to_dict(orient='list')['quantidade_voos'][0]
-        print(total_voos)
         total_voos = format(total_voos, ',')
 
         # voos por ano
@@ -96,6 +95,9 @@ class Paginas():
 
         eixo_x = str(dados_voos_ano_dict['ano_voo']).replace('\'', '')
         eixo_y = str(dados_voos_ano_dict['quantidade_voos']).replace('\'', '')
+
+        # top 20 rotas
+        top_20_rotas = dados[2].toPandas().to_dict(orient='list')
 
         # Coloca os dados no script
         script_voos_ano_string = script_voos_ano_string.replace(
@@ -112,8 +114,8 @@ class Paginas():
             a.h1(klass='w3-margin w3-jumbo', _t='Voo Regular Ativo')
 
             with a.p(klass='w3-xlarge'):
-                a('Informações sobre situação e horários, previstos e realizados, '
-                    'de etapas de voos de empresas de serviços de transporte aéreo '
+                a(
+                    'Informações sobre voos de empresas de serviços de transporte aéreo '
                     'realizados no espaço aéreo brasileiro.'
                 )
 
@@ -121,7 +123,7 @@ class Paginas():
         with a.div(klass='w3-container w3-center w3-padding'):
             with a.div(klass='w3-container w3-center'):
                 with a.p(klass='w3-large'):
-                    a('Quantidade de Voos na base de dados:')
+                    a('Quantidade de voos na base de dados:')
             with a.div(klass='w3-container w3-center'):
                 with a.p(klass='w3-xxxlarge'):
                     a(total_voos)
@@ -132,9 +134,43 @@ class Paginas():
                 with a.p(klass='w3-large'):
                     a('Voos realizados por ano:')
             with a.div(klass='w3-container w3-center w3-padding-small'):
-                with a.div(id='tester', klass='w3-auto'):
+                with a.div(id='voos_ano', klass='w3-auto'):
                     with a.script():
                         a(script_voos_ano_string)
+            a.div(klass='w3-container w3-padding w3-light-grey')
+
+        a('<!-- Top 20 Rotas -->')
+        with a.div(klass='w3-container w3-center w3-padding'):
+            with a.div(klass='w3-container w3-center w3-padding-small'):
+                with a.p(klass='w3-large'):
+                    a('Top 20 Rotas')
+            with a.div(klass='w3-responsive'):
+                with a.table(klass='w3-auto w3-table-all'):
+                    with a.tr(klass="w3-blue"):  # cabecalho tabela
+                        with a.th():
+                            a('Aerodromo de Origem')
+                        with a.th():
+                            a('Cidade de Origem')
+                        with a.th():
+                            a('Aerodromo de Destino')
+                        with a.th():
+                            a('Cidade de Destino')
+                        with a.th():
+                            a('Número de Voos')
+                
+                    for i in range(20):  # Gera linhas das tabela
+                        with a.tr():
+                            with a.th():
+                                a(top_20_rotas['aerodromo_origem'][i])
+                            with a.th():
+                                a(top_20_rotas['municipio_origem'][i])
+                            with a.th():
+                                a(top_20_rotas['aerodromo_destino'][i])
+                            with a.th():
+                                a(top_20_rotas['municipio_destino'][i])
+                            with a.th():
+                                a(format(top_20_rotas['quantidade_voos'][i], ','))
+                        
         return a
 
 

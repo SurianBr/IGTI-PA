@@ -1,4 +1,4 @@
-TESTER = document.getElementById('tester');
+var voos_ano = document.getElementById('voos_ano');
 
 var total_voos = {
     x: |x_total_voos|,
@@ -26,8 +26,11 @@ var layout = {
     automargin: true
 };
 
+var config = {responsive: true}
+
 Plotly.newPlot(
-    TESTER,
+    voos_ano,
     data,
-    layout
+    layout,
+    config
 );
