@@ -341,11 +341,21 @@ class Paginas():
                         with a.th():
                             a('Arquivo de origem do dado​')
 
+            with a.div(klass='w3-container w3-center w3-padding-small'):
+                with a.p():
+                    with a.b():
+                        a('Formato do arquivo: ')
+                    a('Parquet')
+            with a.div(klass='w3-container w3-center w3-padding-small'):
+                with a.form(action='/download-vra', method='get'):
+                    a.input(type='submit', value='Download VRA')
+
+
         a('<!-- Aerodromos -->')
         with a.div(klass='w3-container w3-center w3-padding w3-light-grey'):
             with a.div(klass='w3-container w3-center w3-padding-small'):
                 with a.p(klass='w3-large'):
-                    a('Aerodromos')
+                    a('Aeródromos')
                 with a.p():
                     a(
                         'Dados sobre os aerodromos do Brasil e do Mundo.'
@@ -406,8 +416,8 @@ class Paginas():
                         with a.th():
                             a(
                                 'Código do continente onde está localizado o aeródromo \n'
-                                ' Valores: "AF" Africa, "AN" Antartica, "AS" Asia, "EU" Europa, '
-                                '"NA" América do Norte, "SA" Américo do Sul e "OC" Oceania'
+                                ' Valores: "AF" Africa, "AN" Antártida, "AS" Asia, "EU" Europa, '
+                                '"NA" América do Norte, "SA" América do Sul e "OC" Oceania'
                             )
                     with a.tr(): 
                         with a.th():
@@ -424,6 +434,15 @@ class Paginas():
                             a('iata')
                         with a.th():
                             a('Sigla/Designador IATA aeródromo.')
+
+            with a.div(klass='w3-container w3-center w3-padding-small'):
+                with a.p():
+                    with a.b():
+                        a('Formato do arquivo: ')
+                    a('Parquet')
+            with a.div(klass='w3-container w3-center w3-padding-small'):
+                with a.form(action='/download-aerodromos', method='get'):
+                    a.input(type='submit', value='Download Aerodromos')
 
         return a
 

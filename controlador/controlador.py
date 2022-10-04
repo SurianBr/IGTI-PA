@@ -1,11 +1,8 @@
 
-from asyncore import read
+import os
 import cgi
-from mimetypes import init
-import socketserver
+import shutil
 from http.server import BaseHTTPRequestHandler
-from modelo.bases import Bases
-from visualizacao.paginas import Paginas
 
 class Controlador(BaseHTTPRequestHandler):
     '''
@@ -38,6 +35,12 @@ class Controlador(BaseHTTPRequestHandler):
 
         elif caminho.endswith('metadados'):
             self.processa_get_metadados()
+
+        elif caminho.find('download-vra') > 0:
+            self.processa_get_download_vra()
+
+        elif caminho.find('download-aerodromos') > 0:
+            self.processa_get_download_aerodromos()
         
         '''
         if self.path.endswith('/'):
@@ -58,6 +61,8 @@ class Controlador(BaseHTTPRequestHandler):
         self.send_header('content-type', 'text/html')
         self.end_headers()
         self.wfile.write('Hello World'.encode())
+
+        print("POST")
 
         ctypes, pdict = cgi.parse_header(self.headers.get('content-type'))
 
@@ -85,7 +90,6 @@ class Controlador(BaseHTTPRequestHandler):
         self.wfile.write(str(self.paginas.get_home_page(dados)).encode())
 
 
-
     def processa_get_metadados(self):
         '''
             Processa requisicoes para a pagina de metadados
@@ -96,3 +100,32 @@ class Controlador(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(str(self.paginas.get_metadados()).encode())
 
+
+    def processa_get_download_vra(self):
+        '''
+            Processa requisicoes para o download da tabela de VRA
+        '''
+
+        with open('arquivos/res/vra/vra_final.snappy.parquet', 'rb') as f:
+            fs = os.fstat(f.fileno())
+            self.send_response(200)
+            self.send_header("Content-Type", 'application/octet-stream')
+            self.send_header("Content-Disposition", 'attachment; filename="vra_final.snappy.parquet"')
+            self.send_header("Content-Length", str(fs.st_size))
+            self.end_headers()
+            shutil.copyfileobj(f, self.wfile)
+
+
+    def processa_get_download_aerodromos(self):
+        '''
+            Processa requisicoes para o download da tabela de aerodromos
+        '''
+
+        with open('arquivos/har/aerodromos/aerodromos.snappy.parquet', 'rb') as f:
+            fs = os.fstat(f.fileno())
+            self.send_response(200)
+            self.send_header("Content-Type", 'application/octet-stream')
+            self.send_header("Content-Disposition", 'attachment; filename="aerodromos.snappy.parquet"')
+            self.send_header("Content-Length", str(fs.st_size))
+            self.end_headers()
+            shutil.copyfileobj(f, self.wfile)
