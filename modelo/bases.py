@@ -73,6 +73,8 @@ class Bases():
                     Posição:
                         0: Numero total de voos
                         1: Numero total de voos por ano
+                        2: Top 20 rotas
+                        3: Top 20 aerodromos
         '''
 
         if self.dados_home is None:
@@ -82,6 +84,7 @@ class Bases():
             self.dados_home.append(self.gerar_dados_home_page_total_voos())
             self.dados_home.append(self.gerar_dados_home_page_voos_ano())
             self.dados_home.append(self.gerar_dados_home_top_20_rotas())
+            self.dados_home.append(self.gerar_dados_home_top_20_aerodromos())
 
         return self.dados_home 
 
@@ -184,4 +187,69 @@ class Bases():
         else:
             raise Exception(mensagem)
 
+    def gerar_dados_home_top_20_aerodromos(self):
+        '''
+            Gera os dados de voos por ano para a home page
+            Retono:
+                Dados (Dataframe Spark)
+        '''
+        
+        query = (
+            ' SELECT icao_aerodromo_origem, COUNT(1) as decolagens'
+            ' FROM vra'
+            ' GROUP BY icao_aerodromo_origem'
+            ' ORDER BY decolagens DESC'
+        )
+        codigo, mensagem, df = self.executar_query(query)
 
+        if codigo == 0:
+            df.createOrReplaceTempView('decolagens')
+        
+        else:
+            raise Exception(mensagem)
+
+        query = (
+            ' SELECT icao_aerodromo_destino, COUNT(1) as aterrisagens'
+            ' FROM vra'
+            ' GROUP BY icao_aerodromo_destino'
+            ' ORDER BY aterrisagens DESC'
+        )
+        codigo, mensagem, df = self.executar_query(query)
+
+        if codigo == 0:
+            df.createOrReplaceTempView('aterrisagens')
+        
+        else:
+            raise Exception(mensagem)
+
+        query = (
+            ' SELECT decolagens.icao_aerodromo_origem as aerodromo, decolagens, aterrisagens, (decolagens+aterrisagens) as total'
+            ' FROM decolagens'
+            ' INNER JOIN aterrisagens'
+            ' ON decolagens.icao_aerodromo_origem = aterrisagens.icao_aerodromo_destino'
+            ' ORDER BY total DESC'
+        )
+        codigo, mensagem, df = self.executar_query(query)
+
+        if codigo == 0:
+            df.createOrReplaceTempView('aerodromos_mais_usados')
+        
+        else:
+            raise Exception(mensagem)
+
+        query = (
+            ' SELECT nome, municipio, decolagens, aterrisagens, total'
+            ' FROM aerodromos_mais_usados'
+            ' INNER JOIN aerodromos'
+            ' ON aerodromo = icao'
+            ' AND pais_iso = "BR"'
+            ' ORDER BY total DESC'
+            ' LIMIT 20'
+        )
+        codigo, mensagem, df = self.executar_query(query)
+
+        if codigo == 0:
+            return df
+        
+        else:
+            raise Exception(mensagem)

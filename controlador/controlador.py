@@ -30,11 +30,14 @@ class Controlador(BaseHTTPRequestHandler):
         '''
         caminho = self.path
 
-        if (caminho.endswith('favicon.ico')):
+        if caminho.endswith('favicon.ico'):
             self.processa_get_favicon()
 
-        if (caminho.endswith('/')):
+        elif caminho.endswith('/'):
             self.processa_get_home_page()
+
+        elif caminho.endswith('metadados'):
+            self.processa_get_metadados()
         
         '''
         if self.path.endswith('/'):
@@ -80,3 +83,16 @@ class Controlador(BaseHTTPRequestHandler):
         self.send_header('content-type', 'text/html')
         self.end_headers()
         self.wfile.write(str(self.paginas.get_home_page(dados)).encode())
+
+
+
+    def processa_get_metadados(self):
+        '''
+            Processa requisicoes para a pagina de metadados
+        '''
+
+        self.send_response(200)
+        self.send_header('content-type', 'text/html')
+        self.end_headers()
+        self.wfile.write(str(self.paginas.get_metadados()).encode())
+
