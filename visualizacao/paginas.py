@@ -1,3 +1,4 @@
+from multiprocessing.sharedctypes import Value
 from airium import Airium
 
 class Paginas():
@@ -6,6 +7,7 @@ class Paginas():
         
         # prepara variaveis
         self.home_page = None
+        self.consulta = None
         self.metadados = None
     
 
@@ -18,13 +20,42 @@ class Paginas():
 
             self.home_page = self.get_pagina_vazia()
 
-            self.home_page.body(
-                self.get_barra_navegacao(),
-                self.get_body_home(dados),
-                self.get_rodape()
-            )
+            with self.home_page.body():
+                self.home_page(self.get_barra_navegacao())
+                self.home_page(self.get_body_home(dados))
+                self.home_page(self.get_rodape())
 
         return self.home_page
+
+
+    def get_consulta(self):
+        '''
+            Monta pagina de consulta
+        '''
+
+        if self.consulta is None:
+
+            self.consulta = self.get_pagina_vazia()
+
+            with self.consulta.body(style='height:100%'):
+                self.consulta(self.get_barra_navegacao())
+                self.consulta(self.get_body_consulta())
+                self.consulta(self.get_rodape())
+
+        return self.consulta
+
+
+    def get_consulta_query(self, dados, query):
+        '''
+            Monta pagina com o resultado da query
+        '''
+        pagina = self.get_pagina_vazia()
+        with pagina.body(style='height:100%'):
+            pagina(self.get_barra_navegacao())
+            pagina(self.get_body_consulta_query(dados, query))
+            pagina(self.get_rodape())
+
+        return pagina
 
 
     def get_metadados(self):
@@ -33,11 +64,10 @@ class Paginas():
 
             self.metadados = self.get_pagina_vazia()
 
-            self.metadados.body(
-                self.get_barra_navegacao(),
-                self.get_body_metadados(),
-                self.get_rodape()
-            )
+            with self.metadados.body():
+                self.metadados(self.get_barra_navegacao())
+                self.metadados(self.get_body_metadados())
+                self.metadados(self.get_rodape())
 
         return self.metadados
 
@@ -50,7 +80,7 @@ class Paginas():
             with a.head():
                 a.title(_t='Voo Regular Ativo')
                 a.meta(charset='UTF-8')
-                a.meta(content='width=device-width, initial-scale=1', name='viewport')
+                a.meta(content='width=device-width, width=device-width, initial-scale=1', name='viewport')
                 a.link(href='https://www.w3schools.com/w3css/4/w3.css', rel='stylesheet')
                 a.link(href='https://fonts.googleapis.com/css?family=Lato', rel='stylesheet')
                 a.link(href='https://fonts.googleapis.com/css?family=Montserrat', rel='stylesheet')
@@ -72,10 +102,13 @@ class Paginas():
                 with a.a(klass='w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-blue', href='javascript:void(0);', onclick='myFunction()', title='Toggle Navigation Menu'):
                     a.i(klass='fa fa-bars')
                 a.a(klass='w3-bar-item w3-button w3-padding-large w3-white', href='/', _t='Home')
+                a.a(klass='w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white', href='consulta', _t='Consulta')
                 a.a(klass='w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white', href='metadados', _t='Metadados')
             a('<!-- Navbar on small screens -->')
             with a.div(klass='w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large', id='navDemo'):
-                a.a(klass='w3-bar-item w3-button w3-padding-large', href='metadados', _t='Metadados')
+                a.a(klass='w3-bar-item w3-button w3-padding-large w3-white', href='/', _t='Home')
+                a.a(klass='w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white', href='consulta', _t='Consulta')
+                a.a(klass='w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white', href='metadados', _t='Metadados')
 
         return a
 
@@ -216,6 +249,110 @@ class Paginas():
                             with a.th():
                                 a(format(top_20_aerodromos['total'][i], ','))
                         
+        return a
+
+
+    def get_body_consulta(self):
+        a = Airium()
+
+        # Busca scripts dos graficos
+        script_consulta = open('js/home_page/consulta.js', 'r', encoding='utf-8')
+        script_consulta_string = script_consulta.read()
+        script_consulta.close()
+
+        a('<!-- Header -->')
+        with a.header(klass='w3-container w3-blue w3-center w3-padding-32'):
+            a.h1(klass='w3-margin w3-jumbo', _t='Consulta')
+
+            with a.p(klass='w3-xlarge'):
+                a(
+                    'Cosulte os dados disponívies escrevendo queries em SQL.'
+                )
+                a.br()
+                a(
+                    'Para informações sobre as tabelas disponíveis e seus campos, vá para '
+                )
+                with a.a(
+                    href='metadados',
+                    target="_blank"
+                    ):
+                    a('metadados')
+                a(
+                    '.'
+                )
+
+        a('<!-- Consulta -->')
+        with a.div(klass='w3-container w3-center w3-padding'):
+            a.div(klass='w3-container w3-quarter')
+            with a.div(klass='w3-container w3-center w3-half'):
+                with a.p(klass='w3-large'):
+                    a('Query')
+                with a.form(id='form_query', action='/consultar', method='get', target='_blank'):
+                    a.input('hidden', name="query", type="text", id="editortext")
+                    with a.div(id='editor', style="height:500px"):
+                    
+                        a.script(
+                        src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.11.2/ace.js",
+                        integrity="sha512-AhCq6G80Ge/e6Pl3QTNGI2Je+6ixVVDmmE4Nui8/dHRBKxMUvjJxn6CYEcMQdTSxHreC3USOxTDrvUPLtN5J7w==",
+                        crossorigin="anonymous",
+                        referrerpolicy="no-referrer"
+                        )
+                    a.script(
+                        src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.11.2/theme-monokai.min.js",
+                        integrity="sha512-vH1p51CJtqdqWMpL32h5B9600achcN1XeTfd31hEcrCcCb5PCljIu7NQppgdNtdsayRQTnKmyf94s6HYiGQ9BA==",
+                        crossorigin="anonymous",
+                        referrerpolicy="no-referrer"
+                    )
+                    a.script(
+                        src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.11.2/snippets/mysql.min.js",
+                        integrity="sha512-eASrazWxTooSzJmaO4rySNPxEGbhWeaFpzES97jflaFDoNjegixdAPt+yx0WBm8n5SoagkWNYv+ol0ou52MQtg==",
+                        crossorigin="anonymous",
+                        referrerpolicy="no-referrer"
+                    )
+                    
+                    with a.script():
+                        a(script_consulta_string)
+
+                    a.br()
+                    a.input(type='submit', value='Consultar')
+            a.div(klass='w3-container w3-quarter')
+
+        return a
+
+
+    def get_body_consulta_query(self, dados, query):
+        a = Airium()
+        
+        # Prepara dados
+        dados_dict = dados.toPandas().to_dict(orient="list")
+        chaves = list(dados_dict.keys())
+
+        a('<!-- Header -->')
+        with a.header(klass='w3-container w3-blue w3-center w3-padding-32'):
+            a.h1(klass='w3-margin w3-jumbo', _t='Resultado da Query')
+
+        a('<!-- Tabela de resultado -->')
+        with a.div(klass='w3-container w3-center w3-padding w3-light-grey'):
+            with a.div(klass='w3-responsive'):
+                with a.table(klass='w3-auto w3-table-all'):
+                    with a.tr(klass="w3-blue"):  # cabecalho tabela
+                        for chave in chaves:
+                            with a.th():
+                                a('{0}'.format(chave))
+                
+                    for i in range(len(dados_dict[chaves[0]])):  # Gera linhas das tabela
+                        with a.tr():
+                            for chave in chaves:
+                                with a.th():
+                                    a(dados_dict.get(chave)[i])
+
+
+        a('<!-- Tabela de resultado -->')
+        with a.div(klass='w3-container w3-center w3-padding w3-light-grey'):
+            with a.form(id='form_query', action='/download-query', method='get'):
+                a.input('hidden', name="query", type="text", id="editortext", value=query)
+                a.input(type='submit', value='Download Dados')
+
         return a
 
 
@@ -415,7 +552,7 @@ class Paginas():
                             a('continente')
                         with a.th():
                             a(
-                                'Código do continente onde está localizado o aeródromo \n'
+                                'Código do continente onde está localizado o aeródromo. <br>'
                                 ' Valores: "AF" Africa, "AN" Antártida, "AS" Asia, "EU" Europa, '
                                 '"NA" América do Norte, "SA" América do Sul e "OC" Oceania'
                             )
