@@ -22,6 +22,9 @@ class Bases():
         self.aerodromos = self.spark.read.parquet('arquivos/har/aerodromos/aerodromos.snappy.parquet')
         self.aerodromos.createOrReplaceTempView('aerodromos')
 
+        self.empresas = self.spark.read.parquet('arquivos/har/empresas/empresas.snappy.parquet')
+        self.empresas.createOrReplaceTempView('empresas')
+
 
     def busca_favicon(self):
         if self.favicon is None:
@@ -186,6 +189,7 @@ class Bases():
         
         else:
             raise Exception(mensagem)
+
 
     def gerar_dados_home_top_20_aerodromos(self):
         '''

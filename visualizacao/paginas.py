@@ -581,6 +581,80 @@ class Paginas():
                 with a.form(action='/download-aerodromos', method='get'):
                     a.input(type='submit', value='Download Aerodromos')
 
+        a('<!-- Empreasas -->')
+        with a.div(klass='w3-container w3-center w3-padding'):
+            with a.div(klass='w3-container w3-center w3-padding-small'):
+                with a.p(klass='w3-large'):
+                    a('Empresas Aéreas')
+                with a.p():
+                    a(
+                        'Dados sobre as empresas apereas'
+                    )
+                with a.p():
+                    with a.b():
+                        a('Nome da tabela para consultas: ')
+                    a('empreasas')
+                with a.p():
+                    with a.b():
+                        a('Fonte: ')
+                    with a.a(
+                        href='https://openflights.org/data.html#airline',
+                        target="_blank"
+                        ):
+                        a('Open Flights')
+            with a.div(klass='w3-responsive'):
+                with a.table(klass='w3-auto w3-table-all'):
+                    with a.tr(klass="w3-blue"):  # cabecalho tabela
+                        with a.th():
+                            a('Campo')
+                        with a.th():
+                            a('Descrição')
+
+                    with a.tr(): 
+                        with a.th():
+                            a('id')
+                        with a.th():
+                            a('Código aeródromo do site Open Flights')
+                    with a.tr(): 
+                        with a.th():
+                            a('nome')
+                        with a.th():
+                            a('Nome da empresa aérea')
+                    with a.tr(): 
+                        with a.th():
+                            a('apelido')
+                        with a.th():
+                            a('Apelido que a empresa aérea é conhecida')
+                    with a.tr(): 
+                        with a.th():
+                            a('iata')
+                        with a.th():
+                            a('Sigla/Designador IATA da empresa aérea')
+                    with a.tr(): 
+                        with a.th():
+                            a('icao')
+                        with a.th():
+                            a('Sigla/Designador ICAO da empresa aérea')
+                    with a.tr(): 
+                        with a.th():
+                            a('indicativo_chamada')
+                        with a.th():
+                            a('Indicativo de chamada (Callsign) da empresa aérea')
+                    with a.tr(): 
+                        with a.th():
+                            a('pais')
+                        with a.th():
+                            a('País de origem da empresa aérea')
+
+            with a.div(klass='w3-container w3-center w3-padding-small'):
+                with a.p():
+                    with a.b():
+                        a('Formato do arquivo: ')
+                    a('Parquet')
+            with a.div(klass='w3-container w3-center w3-padding-small'):
+                with a.form(action='/download-empresas', method='get'):
+                    a.input(type='submit', value='Download Empresas')
+
         return a
 
 

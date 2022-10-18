@@ -1,4 +1,3 @@
-
 import os
 import cgi
 import shutil
@@ -52,25 +51,15 @@ class Controlador(BaseHTTPRequestHandler):
         elif caminho.find('download-aerodromos') > 0:
             self.processa_get_download_aerodromos()
 
+        elif caminho.find('download-empresas') > 0:
+            self.processa_get_download_empresas()
+
         elif caminho.find('download-query') > 0:
             parsed_url = urlparse(caminho)
             captured_value = parse_qs(parsed_url.query)
             query = captured_value.get('query', None)
 
             self.processa_get_download_query(query[0])
-        
-        '''
-        if self.path.endswith('/'):
-            self.send_response(200)
-            self.send_header('content-type', 'text/html')
-            self.end_headers()
-            self.wfile.write(str(self.home_page).encode())
-            
-        else:
-            self.send_response(404)
-            self.send_header('content-type', 'text/html')
-            self.end_headers()
-        '''
 
 
     def do_POST(self):
@@ -169,6 +158,21 @@ class Controlador(BaseHTTPRequestHandler):
             self.send_response(200)
             self.send_header("Content-Type", 'application/octet-stream')
             self.send_header("Content-Disposition", 'attachment; filename="aerodromos.snappy.parquet"')
+            self.send_header("Content-Length", str(fs.st_size))
+            self.end_headers()
+            shutil.copyfileobj(f, self.wfile)
+
+
+    def processa_get_download_empresas(self):
+        '''
+            Processa requisicoes para o download da tabela de empresas
+        '''
+
+        with open('arquivos/har/empresas/empresas.snappy.parquet', 'rb') as f:
+            fs = os.fstat(f.fileno())
+            self.send_response(200)
+            self.send_header("Content-Type", 'application/octet-stream')
+            self.send_header("Content-Disposition", 'attachment; filename="empresas.snappy.parquet"')
             self.send_header("Content-Length", str(fs.st_size))
             self.end_headers()
             shutil.copyfileobj(f, self.wfile)
