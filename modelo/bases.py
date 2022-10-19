@@ -11,6 +11,7 @@ class Bases():
         # Prepara variaveis
         self.favicon = None
         self.dados_home = None
+        self.dados_cancelamento = None
 
         # Prepara sessao
         self.spark = SparkSession.builder.appName("bases").getOrCreate()
@@ -24,6 +25,8 @@ class Bases():
 
         self.empresas = self.spark.read.parquet('arquivos/har/empresas/empresas.snappy.parquet')
         self.empresas.createOrReplaceTempView('empresas')
+
+        self.cancelamentos = None
 
 
     def busca_favicon(self):
@@ -249,6 +252,108 @@ class Bases():
             ' AND pais_iso = "BR"'
             ' ORDER BY total DESC'
             ' LIMIT 20'
+        )
+        codigo, mensagem, df = self.executar_query(query)
+
+        if codigo == 0:
+            return df
+        
+        else:
+            raise Exception(mensagem)
+
+
+    def busca_dados_cancelamentos(self):
+        '''
+            Gera os dados necessarios para popular a home page
+
+            Retono:
+                Dados (Lista): Lista de dataframes com os dados para a home page
+                    Posição:
+                        0: Cancelamentos por ano
+        '''
+
+        if self.dados_cancelamento is None:
+
+            self.dados_cancelamento= []
+
+            self.gerar_dados_cancelamentos_base()
+            
+            self.dados_cancelamento.append(self.gerar_dados_cancelamentos_ano())
+
+        return self.dados_cancelamento 
+
+
+    def gerar_dados_cancelamentos_base(self):
+        '''
+            Gera a base de dados que ira ser usada para os calculos de cancelamentos
+            Retono:
+                Dados (Dataframe Spark)
+        '''
+        query = (
+            ' SELECT ano_voo, mes_voo, icao_empresa_aerea, icao_aerodromo_origem as aerodromo, COUNT(1) as quantidade_voos_total'
+            ' FROM vra'
+            ' WHERE icao_empresa_aerea IS NOT NULL'
+            ' GROUP BY ano_voo, mes_voo, icao_empresa_aerea, icao_aerodromo_origem'
+            ' ORDER BY quantidade_voos_total DESC'
+        )
+        codigo, mensagem, df = self.executar_query(query)
+
+        if codigo == 0:
+            df.createOrReplaceTempView('voos_por_empresas')
+
+        query = (
+            ' SELECT ano_voo, mes_voo, icao_empresa_aerea, icao_aerodromo_origem as aerodromo, COUNT(1) as quantidade_voos_cancelados'
+            ' FROM vra'
+            ' WHERE situacao_voo = "CANCELADO"'
+            ' AND icao_empresa_aerea IS NOT NULL'
+            ' GROUP BY ano_voo, mes_voo, icao_empresa_aerea, icao_aerodromo_origem'
+            ' ORDER BY quantidade_voos_cancelados DESC'
+        )
+        codigo, mensagem, df = self.executar_query(query)
+
+        if codigo == 0:
+            df.createOrReplaceTempView('voos_por_empresas_cancelado')
+
+        query = (
+            ' SELECT voos_por_empresas.ano_voo, voos_por_empresas.mes_voo, voos_por_empresas.icao_empresa_aerea,'
+            ' voos_por_empresas.aerodromo as aerodromo, quantidade_voos_total, quantidade_voos_cancelados'
+            ' FROM voos_por_empresas'
+            ' INNER JOIN voos_por_empresas_cancelado'
+            ' ON voos_por_empresas.ano_voo = voos_por_empresas_cancelado.ano_voo'
+            ' AND voos_por_empresas.mes_voo = voos_por_empresas_cancelado.mes_voo'
+            ' AND voos_por_empresas.icao_empresa_aerea = voos_por_empresas_cancelado.icao_empresa_aerea'
+            ' AND voos_por_empresas.aerodromo = voos_por_empresas_cancelado.aerodromo'
+        )
+        codigo, mensagem, df = self.executar_query(query)
+
+        if codigo == 0:
+            df.createOrReplaceTempView('voos_por_empresas_totais')
+
+        query = (
+            ' SELECT ano_voo, mes_voo, icao_empresa_aerea, nome as icao_empresa_aerea, pais, aerodromo, quantidade_voos_total, quantidade_voos_cancelados'
+            ' FROM voos_por_empresas_totais'
+            ' INNER JOIN empresas'
+            ' ON icao_empresa_aerea = icao'
+            ' AND icao IS NOT NULL'
+        )
+        codigo, mensagem, df = self.executar_query(query)
+
+        if codigo == 0:
+            df.createOrReplaceTempView('voos_por_empresas_final')
+
+
+    def gerar_dados_cancelamentos_ano(self):
+        '''
+            Gera os dados de cancelamento por ano para a home page
+            Retono:
+                Dados (Dataframe Spark)
+        '''
+        
+        query = (
+            ' SELECT ano_voo, ((SUM(quantidade_voos_cancelados) * 100) / SUM(quantidade_voos_total)) as porcentage_cancelado'
+            ' FROM voos_por_empresas_totais'
+            ' GROUP BY ano_voo'
+            ' ORDER BY ano_voo ASC'
         )
         codigo, mensagem, df = self.executar_query(query)
 

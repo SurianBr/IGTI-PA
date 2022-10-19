@@ -42,6 +42,9 @@ class Controlador(BaseHTTPRequestHandler):
             query = captured_value.get('query', None)
             self.processa_get_consulta(query)
 
+        elif caminho.find('cancelamentos') > 0:
+            self.processa_get_cancelamentos()
+
         elif caminho.find('metadados') > 0:
             self.processa_get_metadados()
 
@@ -120,6 +123,18 @@ class Controlador(BaseHTTPRequestHandler):
             self.send_header('content-type', 'text/html')
             self.end_headers()
             self.wfile.write(str(self.paginas.get_consulta_query(dados, query[0])).encode())
+
+
+    def processa_get_cancelamentos(self):
+        '''
+            Processa requisicoes para a home page
+        '''
+        dados = self.bases.busca_dados_cancelamentos()
+
+        self.send_response(200)
+        self.send_header('content-type', 'text/html')
+        self.end_headers()
+        self.wfile.write(str(self.paginas.get_cancelamentos(dados)).encode())
 
 
     def processa_get_metadados(self):

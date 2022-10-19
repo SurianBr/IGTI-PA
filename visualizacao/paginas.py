@@ -58,6 +58,19 @@ class Paginas():
         return pagina
 
 
+    def get_cancelamentos(self, dados):
+        '''
+            Monta pagina com o resultado da query
+        '''
+        pagina = self.get_pagina_vazia()
+        with pagina.body(style='height:100%'):
+            pagina(self.get_barra_navegacao())
+            pagina(self.get_body_cancelamentos(dados))
+            pagina(self.get_rodape())
+
+        return pagina
+
+
     def get_metadados(self):
         
         if self.metadados is None:
@@ -103,11 +116,13 @@ class Paginas():
                     a.i(klass='fa fa-bars')
                 a.a(klass='w3-bar-item w3-button w3-padding-large w3-white', href='/', _t='Home')
                 a.a(klass='w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white', href='consulta', _t='Consulta')
+                a.a(klass='w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white', href='cancelamentos', _t='Cancelamentos')
                 a.a(klass='w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white', href='metadados', _t='Metadados')
             a('<!-- Navbar on small screens -->')
             with a.div(klass='w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large', id='navDemo'):
                 a.a(klass='w3-bar-item w3-button w3-padding-large w3-white', href='/', _t='Home')
                 a.a(klass='w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white', href='consulta', _t='Consulta')
+                a.a(klass='w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white', href='cancelamentos', _t='Cancelamentos')
                 a.a(klass='w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white', href='metadados', _t='Metadados')
 
         return a
@@ -354,6 +369,65 @@ class Paginas():
                 a.input(type='submit', value='Download Dados')
 
         return a
+
+
+    def get_body_cancelamentos(self, dados):
+        '''
+            Monta a pagina home
+
+            Parametros:
+                dados (list: Dataframe Spark): Lista com os Dataframes que 
+                iram ser usados para montar a home page
+        '''
+        a = Airium()
+
+        # Busca scripts dos graficos
+        script_cancelamento_ano = open('js/home_page/grafico_cancelamentos_ano.js', 'r', encoding='utf-8')
+        script_cancelamento_string = script_cancelamento_ano.read()
+        script_cancelamento_ano.close()
+
+        # Prepara dados
+
+        # voos por ano
+        dados_cancelamento_ano_dict = dados[0].toPandas().to_dict(orient='list')
+
+        eixo_x = str(dados_cancelamento_ano_dict['ano_voo']).replace('\'', '')
+        eixo_y = str(dados_cancelamento_ano_dict['porcentage_cancelado']).replace('\'', '')
+
+
+        # Coloca os dados no script
+        script_cancelamento_string = script_cancelamento_string.replace(
+            '|x_cancelamentos|',
+            eixo_x
+        )
+        script_cancelamento_string = script_cancelamento_string.replace(
+            '|y_cancelamentos|',
+            eixo_y
+        )
+        
+        a('<!-- Header -->')
+        with a.header(klass='w3-container w3-blue w3-center w3-padding-32'):
+            a.h1(klass='w3-margin w3-jumbo', _t='Cancelamentos')
+
+            with a.p(klass='w3-xlarge'):
+                a(
+                    'Informações sobre cancelamentos de voos'
+                )
+
+
+        a('<!-- Cancelamento por ano -->')
+        with a.div(klass='w3-container w3-center w3-padding'):
+            with a.div(klass='w3-container w3-center w3-padding-small'):
+                with a.p(klass='w3-large'):
+                    a('Percentual de cancelamentos de voos por ano:')
+            with a.div(klass='w3-container w3-center w3-padding-small'):
+                with a.div(id='cancelamentos_ano', klass='w3-auto'):
+                    with a.script():
+                        a(script_cancelamento_string)
+            a.div(klass='w3-container w3-padding w3-light-grey')
+                        
+        return a
+
 
 
     def get_body_metadados(self):
