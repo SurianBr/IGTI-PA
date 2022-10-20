@@ -1,0 +1,52 @@
+{
+    "colunas": [
+        {
+            "nome_final": "id",
+            "nome_colunas_possiveis" : [
+                0
+            ]
+        },
+        {
+            "nome_final": "nome",
+            "nome_colunas_possiveis" : [
+                1
+            ]
+        },
+        {
+            "nome_final": "apelido",
+            "nome_colunas_possiveis" : [
+                2
+            ]
+        },
+        {
+            "nome_final": "iata",
+            "nome_colunas_possiveis" : [
+                3
+            ]
+        },
+        {
+            "nome_final": "icao",
+            "nome_colunas_possiveis" : [
+                4
+            ]
+        },
+        {
+            "nome_final": "indicativo_chamada",
+            "nome_colunas_possiveis" : [
+                5
+            ]
+        },
+        {
+            "nome_final": "pais",
+            "nome_colunas_possiveis" : [
+                6
+            ]
+        },
+        {
+            "nome_final": "ativo",
+            "nome_colunas_possiveis" : [
+                7
+            ]
+        }
+    ]
+}
