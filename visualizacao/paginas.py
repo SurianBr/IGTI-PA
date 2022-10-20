@@ -386,16 +386,42 @@ class Paginas():
         script_cancelamento_string = script_cancelamento_ano.read()
         script_cancelamento_ano.close()
 
-        # Prepara dados
+        script_cancelamento_ano_boxplot = open('js/home_page/grafico_cancelamentos_ano_boxplot.js', 'r', encoding='utf-8')
+        script_cancelamento_string_boxplot = script_cancelamento_ano_boxplot.read()
+        script_cancelamento_ano_boxplot.close()
 
-        # voos por ano
+        script_cancelamento_ano_empresa = open('js/home_page/grafico_cancelamentos_ano_empresa.js', 'r', encoding='utf-8')
+        script_cancelamento_ano_empresa_string = script_cancelamento_ano_empresa.read()
+        script_cancelamento_ano_empresa.close()
+
+        script_cancelamento_ano_empresa_boxplot = open('js/home_page/grafico_cancelamentos_ano_empresa_boxplot.js', 'r', encoding='utf-8')
+        script_cancelamento_ano_empresa_boxplot_string = script_cancelamento_ano_empresa_boxplot.read()
+        script_cancelamento_ano_empresa_boxplot.close()
+
+        # Prepara dados
+        # voos cancelados por ano
         dados_cancelamento_ano_dict = dados[0].toPandas().to_dict(orient='list')
 
         eixo_x = str(dados_cancelamento_ano_dict['ano_voo']).replace('\'', '')
         eixo_y = str(dados_cancelamento_ano_dict['porcentage_cancelado']).replace('\'', '')
 
+        # voos cancelados por ano e empresa
+        dados_cancelamento_ano__empresa = dados[1].toPandas()
+        cancelamento_ano_empresa_tam_dict = dados_cancelamento_ano__empresa[dados_cancelamento_ano__empresa['icao_empresa_aerea'] == 'TAM'].to_dict(orient='list')
+        cancelamento_ano_empresa_gol_dict = dados_cancelamento_ano__empresa[dados_cancelamento_ano__empresa['icao_empresa_aerea'] == 'GLO'].to_dict(orient='list')
+        cancelamento_ano_empresa_azul_dict = dados_cancelamento_ano__empresa[dados_cancelamento_ano__empresa['icao_empresa_aerea'] == 'AZU'].to_dict(orient='list')
+
+        tam_x = str(cancelamento_ano_empresa_tam_dict['ano_voo']).replace('\'', '')
+        tam_y = str(cancelamento_ano_empresa_tam_dict['porcentage_cancelado']).replace('\'', '')
+
+        gol_x = str(cancelamento_ano_empresa_gol_dict['ano_voo']).replace('\'', '')
+        gol_y = str(cancelamento_ano_empresa_gol_dict['porcentage_cancelado']).replace('\'', '')
+
+        azul_x = str(cancelamento_ano_empresa_azul_dict['ano_voo']).replace('\'', '')
+        azul_y = str(cancelamento_ano_empresa_azul_dict['porcentage_cancelado']).replace('\'', '')
 
         # Coloca os dados no script
+        # voos cancelados por ano
         script_cancelamento_string = script_cancelamento_string.replace(
             '|x_cancelamentos|',
             eixo_x
@@ -403,6 +429,68 @@ class Paginas():
         script_cancelamento_string = script_cancelamento_string.replace(
             '|y_cancelamentos|',
             eixo_y
+        )
+
+        # voos cancelados por ano box plot
+        script_cancelamento_string_boxplot = script_cancelamento_string_boxplot.replace(
+            '|x_cancelamentos|',
+            eixo_x
+        )
+        script_cancelamento_string_boxplot = script_cancelamento_string_boxplot.replace(
+            '|y_cancelamentos|',
+            eixo_y
+        )
+
+        # voos cancelados por ano e empresa
+        script_cancelamento_ano_empresa_string = script_cancelamento_ano_empresa_string.replace(
+            '|tam_x|',
+            tam_x
+        )
+        script_cancelamento_ano_empresa_string = script_cancelamento_ano_empresa_string.replace(
+            '|tam_y|',
+            tam_y
+        )
+        script_cancelamento_ano_empresa_string = script_cancelamento_ano_empresa_string.replace(
+            '|gol_x|',
+            gol_x
+        )
+        script_cancelamento_ano_empresa_string = script_cancelamento_ano_empresa_string.replace(
+            '|gol_y|',
+            gol_y
+        )
+        script_cancelamento_ano_empresa_string = script_cancelamento_ano_empresa_string.replace(
+            '|azul_x|',
+            azul_x
+        )
+        script_cancelamento_ano_empresa_string = script_cancelamento_ano_empresa_string.replace(
+            '|azul_y|',
+            azul_y
+        )
+
+        # voos cancelados por ano e empresa boxplot
+        script_cancelamento_ano_empresa_boxplot_string = script_cancelamento_ano_empresa_boxplot_string.replace(
+            '|tam_x|',
+            tam_x
+        )
+        script_cancelamento_ano_empresa_boxplot_string = script_cancelamento_ano_empresa_boxplot_string.replace(
+            '|tam_y|',
+            tam_y
+        )
+        script_cancelamento_ano_empresa_boxplot_string = script_cancelamento_ano_empresa_boxplot_string.replace(
+            '|gol_x|',
+            gol_x
+        )
+        script_cancelamento_ano_empresa_boxplot_string = script_cancelamento_ano_empresa_boxplot_string.replace(
+            '|gol_y|',
+            gol_y
+        )
+        script_cancelamento_ano_empresa_boxplot_string = script_cancelamento_ano_empresa_boxplot_string.replace(
+            '|azul_x|',
+            azul_x
+        )
+        script_cancelamento_ano_empresa_boxplot_string = script_cancelamento_ano_empresa_boxplot_string.replace(
+            '|azul_y|',
+            azul_y
         )
         
         a('<!-- Header -->')
@@ -424,6 +512,41 @@ class Paginas():
                 with a.div(id='cancelamentos_ano', klass='w3-auto'):
                     with a.script():
                         a(script_cancelamento_string)
+            a.div(klass='w3-container w3-padding')
+
+        a('<!-- Cancelamento por ano boxplot -->')
+        with a.div(klass='w3-container w3-center w3-padding w3-light-grey'):
+            with a.div(klass='w3-container w3-center w3-padding-small'):
+                with a.p(klass='w3-large'):
+                    a('Boxplot dos cancelamentos de voos por ano:')
+            with a.div(klass='w3-container w3-center w3-padding-small'):
+                with a.div(id='cancelamentos_ano_boxplot', klass='w3-auto'):
+                    with a.script():
+                        a(script_cancelamento_string_boxplot)
+            a.div(klass='w3-container w3-padding w3-light-grey')
+
+
+        a('<!-- Cancelamento por ano e empresa -->')
+        with a.div(klass='w3-container w3-center w3-padding'):
+            with a.div(klass='w3-container w3-center w3-padding-small'):
+                with a.p(klass='w3-large'):
+                    a('Cancelamentos de voos por ano e empresas TOP 3:')
+            with a.div(klass='w3-container w3-center w3-padding-small'):
+                with a.div(id='cancelamentos_ano_empresa', klass='w3-auto'):
+                    with a.script():
+                        a(script_cancelamento_ano_empresa_string)
+            a.div(klass='w3-container w3-padding')
+
+
+        a('<!-- boxplot Cancelamento por ano e empresa -->')
+        with a.div(klass='w3-container w3-center w3-padding w3-light-grey'):
+            with a.div(klass='w3-container w3-center w3-padding-small'):
+                with a.p(klass='w3-large'):
+                    a('Boxplot dos cancelamentos de voos por ano e empresas TOP 3:')
+            with a.div(klass='w3-container w3-center w3-padding-small'):
+                with a.div(id='cancelamentos_ano_empresa_boxplot', klass='w3-auto'):
+                    with a.script():
+                        a(script_cancelamento_ano_empresa_boxplot_string)
             a.div(klass='w3-container w3-padding w3-light-grey')
                         
         return a

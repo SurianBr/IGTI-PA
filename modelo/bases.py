@@ -279,6 +279,7 @@ class Bases():
             self.gerar_dados_cancelamentos_base()
             
             self.dados_cancelamento.append(self.gerar_dados_cancelamentos_ano())
+            self.dados_cancelamento.append(self.gerar_dados_cancelamentos_ano_empresa())
 
         return self.dados_cancelamento 
 
@@ -330,7 +331,7 @@ class Bases():
             df.createOrReplaceTempView('voos_por_empresas_totais')
 
         query = (
-            ' SELECT ano_voo, mes_voo, icao_empresa_aerea, nome as icao_empresa_aerea, pais, aerodromo, quantidade_voos_total, quantidade_voos_cancelados'
+            ' SELECT ano_voo, mes_voo, icao_empresa_aerea, nome, pais, aerodromo, quantidade_voos_total, quantidade_voos_cancelados'
             ' FROM voos_por_empresas_totais'
             ' INNER JOIN empresas'
             ' ON icao_empresa_aerea = icao'
@@ -362,3 +363,34 @@ class Bases():
         
         else:
             raise Exception(mensagem)
+
+
+    def gerar_dados_cancelamentos_ano_empresa(self):
+        '''
+            Gera os dados de cancelamento por ano e empresa
+            Retono:
+                Dados (Dataframe Spark)
+        '''
+
+        query = (
+            ' WITH ano_empresa as ('
+            ' SELECT ano_voo, icao_empresa_aerea, SUM(quantidade_voos_total) as quantidade_voos_total, SUM(quantidade_voos_cancelados) as quantidade_voos_cancelados'
+            ' FROM voos_por_empresas_final'
+            ' WHERE icao_empresa_aerea IN ("TAM", "GLO", "AZU")'
+            ' GROUP BY ano_voo, icao_empresa_aerea'
+            ')'
+            'SELECT ano_voo, icao_empresa_aerea, nome, quantidade_voos_total, quantidade_voos_cancelados, '
+            '  ((quantidade_voos_cancelados * 100) / quantidade_voos_total) as porcentage_cancelado'
+            ' FROM ano_empresa'
+            ' INNER JOIN empresas'
+            ' ON icao = icao_empresa_aerea'
+            ' ORDER BY ano_voo ASC'
+        )
+        codigo, mensagem, df = self.executar_query(query)
+
+        if codigo == 0:
+            return df
+        
+        else:
+            raise Exception(mensagem)
+        
