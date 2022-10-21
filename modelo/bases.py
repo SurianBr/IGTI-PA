@@ -26,6 +26,8 @@ class Bases():
         self.empresas = self.spark.read.parquet('arquivos/har/empresas/empresas.snappy.parquet')
         self.empresas.createOrReplaceTempView('empresas')
 
+        self.gerar_dados_cancelamentos_base()
+
         self.cancelamentos = None
 
 
@@ -275,11 +277,15 @@ class Bases():
         if self.dados_cancelamento is None:
 
             self.dados_cancelamento= []
-
-            self.gerar_dados_cancelamentos_base()
             
-            self.dados_cancelamento.append(self.gerar_dados_cancelamentos_ano())
-            self.dados_cancelamento.append(self.gerar_dados_cancelamentos_ano_empresa())
+            df, query = self.gerar_dados_cancelamentos_ano()
+            self.dados_cancelamento.append({'df': df, 'query': query})
+
+            df, query = self.gerar_dados_cancelamentos_ano_empresa()
+            self.dados_cancelamento.append({'df': df, 'query': query})
+
+            df, query = self.gerar_dados_cancelamentos_ano_aerodromos()
+            self.dados_cancelamento.append({'df': df, 'query': query})
 
         return self.dados_cancelamento 
 
@@ -359,7 +365,7 @@ class Bases():
         codigo, mensagem, df = self.executar_query(query)
 
         if codigo == 0:
-            return df
+            return df, query
         
         else:
             raise Exception(mensagem)
@@ -389,8 +395,63 @@ class Bases():
         codigo, mensagem, df = self.executar_query(query)
 
         if codigo == 0:
-            return df
+            return df, query
         
         else:
             raise Exception(mensagem)
         
+
+    def gerar_dados_cancelamentos_ano_aerodromos(self):
+        '''
+            Gera os dados de cancelamento por ano e aerodromo
+            Retono:
+                Dados (Dataframe Spark)
+        '''
+
+        query = (
+            ' WITH decolagens as ('
+            ' SELECT icao_aerodromo_origem, COUNT(1) as decolagens'
+            ' FROM vra'
+            ' GROUP BY icao_aerodromo_origem'
+            ' ORDER BY decolagens DESC'
+            ' ), aterrisagens as ('
+            ' SELECT icao_aerodromo_destino, COUNT(1) as aterrisagens'
+            ' FROM vra'
+            ' GROUP BY icao_aerodromo_destino'
+            ' ORDER BY aterrisagens DESC'
+            ' ), aerodromos_mais_usados as ('
+            ' SELECT decolagens.icao_aerodromo_origem as aerodromo, decolagens, aterrisagens, (decolagens+aterrisagens) as total'
+            ' FROM decolagens'
+            ' INNER JOIN aterrisagens'
+            ' ON decolagens.icao_aerodromo_origem = aterrisagens.icao_aerodromo_destino'
+            ' ), aerodromos_mais_usados_brasil as ('
+            ' SELECT aerodromos_mais_usados.*'
+            ' FROM aerodromos_mais_usados'
+            ' INNER JOIN aerodromos'
+            ' ON aerodromos_mais_usados.aerodromo = aerodromos.icao'
+            ' AND aerodromos.pais_iso = "BR"'
+            ' ORDER BY total DESC'
+            ' LIMIT 20'
+            ' ), cancelamento_ano_aerodromo as ('
+            ' SELECT ano_voo, aerodromo, SUM(quantidade_voos_total) as quantidade_voos_total, SUM(quantidade_voos_cancelados) as quantidade_voos_cancelados'
+            ' FROM voos_por_empresas_final'
+            ' GROUP BY ano_voo, aerodromo'
+            ' ), cancelamento_ano_aerodromo_brasil ('
+            ' SELECT cancelamento_ano_aerodromo.*, ((quantidade_voos_cancelados * 100) / quantidade_voos_total) as porcentage_cancelado'
+            ' FROM cancelamento_ano_aerodromo'
+            ' INNER JOIN aerodromos'
+            ' ON cancelamento_ano_aerodromo.aerodromo = aerodromos.icao'
+            ' )'
+            ' SELECT cancelamento_ano_aerodromo_brasil.*, total'
+            ' FROM cancelamento_ano_aerodromo_brasil'
+            ' INNER JOIN aerodromos_mais_usados_brasil'
+            ' ON cancelamento_ano_aerodromo_brasil.aerodromo=aerodromos_mais_usados_brasil.aerodromo'
+            ' ORDER BY ano_voo, total DESC'
+        )
+        codigo, mensagem, df = self.executar_query(query)
+
+        if codigo == 0:
+            return df, query
+        
+        else:
+            raise Exception(mensagem)

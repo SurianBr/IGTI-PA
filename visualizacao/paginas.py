@@ -346,6 +346,17 @@ class Paginas():
         with a.header(klass='w3-container w3-blue w3-center w3-padding-32'):
             a.h1(klass='w3-margin w3-jumbo', _t='Resultado da Query')
 
+
+        a('<!-- Query -->')
+        with a.div(klass='w3-container w3-center w3-padding'):
+            with a.b():
+                a('Query Processada')
+
+            a('<br>')
+
+            with a.div(klass='w3-responsive'):
+                a(query.replace('|', '<br>'))
+
         a('<!-- Tabela de resultado -->')
         with a.div(klass='w3-container w3-center w3-padding w3-light-grey'):
             with a.div(klass='w3-responsive'):
@@ -398,15 +409,23 @@ class Paginas():
         script_cancelamento_ano_empresa_boxplot_string = script_cancelamento_ano_empresa_boxplot.read()
         script_cancelamento_ano_empresa_boxplot.close()
 
+        script_cancelamentos_ano_aerodromo = open('js/home_page/grafico_cancelamentos_ano_aerodromo.js', 'r', encoding='utf-8')
+        script_cancelamentos_ano_aerodromo_string = script_cancelamentos_ano_aerodromo.read()
+        script_cancelamentos_ano_aerodromo.close()
+
+        script_cancelamentos_ano_aerodromo_boxplot = open('js/home_page/grafico_cancelamentos_ano_aerodromos_boxplot.js', 'r', encoding='utf-8')
+        script_cancelamentos_ano_aerodromo_boxplot_string = script_cancelamentos_ano_aerodromo_boxplot.read()
+        script_cancelamentos_ano_aerodromo_boxplot.close()
+
         # Prepara dados
         # voos cancelados por ano
-        dados_cancelamento_ano_dict = dados[0].toPandas().to_dict(orient='list')
+        dados_cancelamento_ano_dict = dados[0]['df'].toPandas().to_dict(orient='list')
 
         eixo_x = str(dados_cancelamento_ano_dict['ano_voo']).replace('\'', '')
         eixo_y = str(dados_cancelamento_ano_dict['porcentage_cancelado']).replace('\'', '')
 
         # voos cancelados por ano e empresa
-        dados_cancelamento_ano__empresa = dados[1].toPandas()
+        dados_cancelamento_ano__empresa = dados[1]['df'].toPandas()
         cancelamento_ano_empresa_tam_dict = dados_cancelamento_ano__empresa[dados_cancelamento_ano__empresa['icao_empresa_aerea'] == 'TAM'].to_dict(orient='list')
         cancelamento_ano_empresa_gol_dict = dados_cancelamento_ano__empresa[dados_cancelamento_ano__empresa['icao_empresa_aerea'] == 'GLO'].to_dict(orient='list')
         cancelamento_ano_empresa_azul_dict = dados_cancelamento_ano__empresa[dados_cancelamento_ano__empresa['icao_empresa_aerea'] == 'AZU'].to_dict(orient='list')
@@ -419,6 +438,23 @@ class Paginas():
 
         azul_x = str(cancelamento_ano_empresa_azul_dict['ano_voo']).replace('\'', '')
         azul_y = str(cancelamento_ano_empresa_azul_dict['porcentage_cancelado']).replace('\'', '')
+
+        # voos cancelados por ano e aerodromo
+        cancelamento_ano_aerodromo_dict = dados[2]['df'].toPandas().to_dict(orient='records')
+
+        cancelamento_ano_aerodromo_eixo_x = []
+        cancelamento_ano_aerodromo_eixos_y= {}
+        for linha in cancelamento_ano_aerodromo_dict:
+
+            if linha['ano_voo'] not in cancelamento_ano_aerodromo_eixo_x:
+                cancelamento_ano_aerodromo_eixo_x.append(linha['ano_voo'])
+
+            if cancelamento_ano_aerodromo_eixos_y.get(linha['aerodromo'], None) is None:
+                cancelamento_ano_aerodromo_eixos_y[linha['aerodromo']] = [linha['porcentage_cancelado']]
+            else:
+                cancelamento_ano_aerodromo_eixos_y[linha['aerodromo']].append(linha['porcentage_cancelado'])
+
+        cancelamento_ano_aerodromo_eixo_x = str(cancelamento_ano_aerodromo_eixo_x).replace('\'', '')
 
         # Coloca os dados no script
         # voos cancelados por ano
@@ -492,6 +528,40 @@ class Paginas():
             '|azul_y|',
             azul_y
         )
+
+        # voos cancelados por ano e aerodromo e boxplot
+        i = 1
+        for aerodromo in cancelamento_ano_aerodromo_eixos_y:
+            numero_aerodromo = 'aerodromo_{0}'.format(i)
+            eixo_y = str(cancelamento_ano_aerodromo_eixos_y[aerodromo]).replace('\'', '')
+
+            script_cancelamentos_ano_aerodromo_string = script_cancelamentos_ano_aerodromo_string.replace(
+                '|{0}_x|'.format(numero_aerodromo),
+                cancelamento_ano_aerodromo_eixo_x
+            )
+            script_cancelamentos_ano_aerodromo_string = script_cancelamentos_ano_aerodromo_string.replace(
+                '|{0}_y|'.format(numero_aerodromo),
+                eixo_y
+            )
+            script_cancelamentos_ano_aerodromo_string = script_cancelamentos_ano_aerodromo_string.replace(
+                '|{0}|'.format(numero_aerodromo),
+                aerodromo
+            )
+
+            script_cancelamentos_ano_aerodromo_boxplot_string = script_cancelamentos_ano_aerodromo_boxplot_string.replace(
+                '|{0}_x|'.format(numero_aerodromo),
+                cancelamento_ano_aerodromo_eixo_x
+            )
+            script_cancelamentos_ano_aerodromo_boxplot_string = script_cancelamentos_ano_aerodromo_boxplot_string.replace(
+                '|{0}_y|'.format(numero_aerodromo),
+                eixo_y
+            )
+            script_cancelamentos_ano_aerodromo_boxplot_string = script_cancelamentos_ano_aerodromo_boxplot_string.replace(
+                '|{0}|'.format(numero_aerodromo),
+                aerodromo
+            )
+            i += 1
+
         
         a('<!-- Header -->')
         with a.header(klass='w3-container w3-blue w3-center w3-padding-32'):
@@ -512,7 +582,11 @@ class Paginas():
                 with a.div(id='cancelamentos_ano', klass='w3-auto'):
                     with a.script():
                         a(script_cancelamento_string)
-            a.div(klass='w3-container w3-padding')
+            with a.div(klass='w3-container w3-padding'):
+                with a.form(id='form_query', action='/consultar', method='get', target='_blank'):
+                    a.input('hidden', name="query", type="text", id="editortext", value=dados[0]['query'])
+                    a.input(type='submit', value='Visualisar Dados')
+
 
         a('<!-- Cancelamento por ano boxplot -->')
         with a.div(klass='w3-container w3-center w3-padding w3-light-grey'):
@@ -523,7 +597,10 @@ class Paginas():
                 with a.div(id='cancelamentos_ano_boxplot', klass='w3-auto'):
                     with a.script():
                         a(script_cancelamento_string_boxplot)
-            a.div(klass='w3-container w3-padding w3-light-grey')
+            with a.div(klass='w3-container w3-padding w3-light-grey'):
+                with a.form(id='form_query', action='/consultar', method='get', target='_blank'):
+                    a.input('hidden', name="query", type="text", id="editortext", value=dados[0]['query'])
+                    a.input(type='submit', value='Visualisar Dados')
 
 
         a('<!-- Cancelamento por ano e empresa -->')
@@ -535,7 +612,10 @@ class Paginas():
                 with a.div(id='cancelamentos_ano_empresa', klass='w3-auto'):
                     with a.script():
                         a(script_cancelamento_ano_empresa_string)
-            a.div(klass='w3-container w3-padding')
+            with a.div(klass='w3-container w3-padding'):
+                with a.form(id='form_query', action='/consultar', method='get', target='_blank'):
+                    a.input('hidden', name="query", type="text", id="editortext", value=dados[1]['query'])
+                    a.input(type='submit', value='Visualisar Dados')
 
 
         a('<!-- boxplot Cancelamento por ano e empresa -->')
@@ -547,10 +627,42 @@ class Paginas():
                 with a.div(id='cancelamentos_ano_empresa_boxplot', klass='w3-auto'):
                     with a.script():
                         a(script_cancelamento_ano_empresa_boxplot_string)
-            a.div(klass='w3-container w3-padding w3-light-grey')
+            with a.div(klass='w3-container w3-padding w3-light-grey'):
+                with a.form(id='form_query', action='/consultar', method='get', target='_blank'):
+                    a.input('hidden', name="query", type="text", id="editortext", value=dados[1]['query'])
+                    a.input(type='submit', value='Visualisar Dados')
+
+
+        a('<!-- Cancelamento por ano e aerodromo -->')
+        with a.div(klass='w3-container w3-center w3-padding'):
+            with a.div(klass='w3-container w3-center w3-padding-small'):
+                with a.p(klass='w3-large'):
+                    a('Cancelamentos de voos por ano e aeródromo TOP 20:')
+            with a.div(klass='w3-container w3-center w3-padding-small'):
+                with a.div(id='cancelamentos_ano_aerodromo', klass='w3-auto'):
+                    with a.script():
+                        a(script_cancelamentos_ano_aerodromo_string)
+            with a.div(klass='w3-container w3-padding'):
+                with a.form(id='form_query', action='/consultar', method='get', target='_blank'):
+                    a.input('hidden', name="query", type="text", id="editortext", value=dados[2]['query'])
+                    a.input(type='submit', value='Visualisar Dados')
+
+
+        a('<!-- Cancelamento por ano e aerodromo -->')
+        with a.div(klass='w3-container w3-center w3-padding w3-light-grey'):
+            with a.div(klass='w3-container w3-center w3-padding-small'):
+                with a.p(klass='w3-large'):
+                    a('Boxplot dos cancelamentos de voos por ano e aeródromo TOP 20:')
+            with a.div(klass='w3-container w3-center w3-padding-small'):
+                with a.div(id='cancelamentos_ano_aerodromo_boxplot', klass='w3-auto'):
+                    with a.script():
+                        a(script_cancelamentos_ano_aerodromo_boxplot_string)
+            with a.div(klass='w3-container w3-padding w3-light-grey'):
+                with a.form(id='form_query', action='/consultar', method='get', target='_blank'):
+                    a.input('hidden', name="query", type="text", id="editortext", value=dados[2]['query'])
+                    a.input(type='submit', value='Visualisar Dados')
                         
         return a
-
 
 
     def get_body_metadados(self):
