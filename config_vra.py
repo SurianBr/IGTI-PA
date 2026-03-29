@@ -20,7 +20,8 @@ class ConfigVRA:
             'normalizar_aerodromos',
             'normalizar_empresas',
             'tratar_inconsistencias_vra',
-            'criar_database_mysql'
+            'criar_database_mysql',
+            'criar_tabelas_mysql'
         ]
         self.passos = passos or passos_padrao
 
@@ -377,12 +378,12 @@ class ConfigVRA:
 
 if __name__ == '__main__':
     
+    '''
     passos_para_executar = [
         'instalar_dependencias',
         'criar_tabelas_mysql'
-
     ]
     config = ConfigVRA(passos_para_executar)
-
-    #config = ConfigVRA()
+    '''
+    config = ConfigVRA()
     config.iniciar()
