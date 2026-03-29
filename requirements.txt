@@ -2,3 +2,6 @@ bs4
 pandas
 pyarrow
 mysql-connector-python
+sqlalchemy
+pymysql
+numpy

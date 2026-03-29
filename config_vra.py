@@ -24,10 +24,11 @@ class ConfigVRA:
         ]
         self.passos = passos or passos_padrao
 
-        self.database_name = 'vra_db'
+        self.nome_database = 'vra_db'
 
 
     def iniciar(self):
+
         print('Iniciando configuração do VRA...')
 
         if 'instalar_dependencias' in self.passos:
@@ -57,7 +58,7 @@ class ConfigVRA:
         if 'tratar_inconsistencias_vra' in self.passos:
             self.tratar_inconsistencias_vra()
 
-        if 'criar_database_mysql' in self.passos:
+        if 'criar_database_mysql' in self.passos or 'criar_tabelas_mysql' in self.passos:
             host, user, password = self.buscar_credenciais_mysql()
 
             from config_mysql.mySqlutils import MySQLUtils
@@ -65,16 +66,21 @@ class ConfigVRA:
             mysql_utils = MySQLUtils()
 
             try:
-                mydb = mysql_utils.conectar(host, user, password)
+                myConexao = mysql_utils.conectar(host, user, password)
         
             except Exception as e:
                 print(f'Erro ao conectar no MySQL: {e}')
                 raise e
             
+            
             if 'criar_database_mysql' in self.passos:
-                self.criar_database_mysql(mydb, host, user, password)
+                self.criar_database_mysql(mysql_utils, myConexao)
 
-            mydb.close()
+            if 'criar_tabelas_mysql' in self.passos:
+                self.criar_tabelas_mysql(host, user, password)
+            
+
+            myConexao.close()
 
         print('Configuração do VRA concluída com sucesso.')
 
@@ -272,27 +278,108 @@ class ConfigVRA:
             raise e
 
 
-    def criar_database_mysql(self, mydb, host, user, password):
+    def criar_database_mysql(self, mysql_utils, myConexao):
         '''Cria o banco de dados no MySQL usando as credenciais fornecidas'''
         print('Criando database no MySQL...')
 
-        from config_mysql.criarDatabase import CriarDatabase
-
         try:
-            criar_db = CriarDatabase(mydb, host, user, password, self.database_name)
-            criar_db.criar_database()
+            mysql_utils.criar_database(myConexao, self.nome_database)
         except Exception as e:
             print(f'Erro ao criar database no MySQL: {e}')
             raise e
-
+        
+        myConexao.close()
         print('Database criada com sucesso no MySQL.')
+
+    
+    def criar_tabelas_mysql(self, host, user, password):
+        '''Cria as tabelas no banco de dados MySQL'''
+        print('Criando tabelas no MySQL...')
+
+        from sqlalchemy import create_engine
+        import pandas as pd
+        import numpy as np
+
+        string_conexao = f'mysql+pymysql://{user}:{password}@{host}:3306/{self.nome_database}'
+
+        motor = create_engine(string_conexao, echo=False)
+
+        """
+        df_vra = pd.read_parquet('arquivos\\res\\vra\\vra_final.snappy.parquet')
+
+        # Split into 4 equal (or near-equal) parts
+        dfs_ano = [group for none, group in df_vra.groupby('ano_voo')]
+
+        print('Iniciando carga dos dados do VRA no MySQL...')
+        
+        primeira_carga = True
+
+        for df in dfs_ano:
+            print('Carregando dados para o ano:', df.iloc[0]['ano_voo'])
+            
+            try:
+                df.to_sql(
+                    name='vra',
+                    con=motor,
+                    if_exists='replace' if primeira_carga else 'append',
+                    index=False
+                )
+
+                primeira_carga = False
+                
+            except Exception as e:
+                print(f"Erro ao escrever no SQL: {e}")
+                raise e
+            
+        print('Finalizando carga dos dados do VRA no MySQL.')
+
+        print('Iniciando carga dos dados de aerodromos no MySQL...')
+        df_aerodromo = pd.read_parquet('arquivos\\har\\aerodromos\\aerodromos.snappy.parquet')
+
+        try:
+            df_aerodromo.to_sql(
+                name='aerodromos',
+                con=motor,
+                if_exists='replace',
+                index=False
+            )
+            
+        except Exception as e:
+            print(f"Erro ao escrever no SQL: {e}")
+            raise e
+
+        print('Finalizando carga dos dados de aerodromos no MySQL.')
+        """
+        print('Iniciando carga dos dados de empresas aereas no MySQL...')
+
+        df_empresas = pd.read_parquet('arquivos\\har\\empresas\\empresas.snappy.parquet')
+
+        print(df_empresas)
+
+        try:
+            df_empresas.to_sql(
+                name='empresas_aereas',
+                con=motor,
+                if_exists='replace',
+                index=False
+            )
+            
+        except Exception as e:
+            print(f"Erro ao escrever no SQL: {e}")
+            raise e
+        
+        print('Finalizando carga dos dados de empresas aereas no MySQL.')
+
+        motor.dispose()
+
+        print('Tabelas criadas com sucesso no MySQL.')
 
 
 if __name__ == '__main__':
     
     passos_para_executar = [
         'instalar_dependencias',
-        'criar_database_mysql'
+        'criar_tabelas_mysql'
 
     ]
     config = ConfigVRA(passos_para_executar)
