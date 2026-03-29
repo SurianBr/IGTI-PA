@@ -1,4 +1,6 @@
-__pycache__
+__pycache__/
 lista_vra_baixados.json
+lista_vra.json
 *.csv
 *.parquet
+credenciais.json
