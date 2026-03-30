@@ -305,7 +305,6 @@ class ConfigVRA:
 
         motor = create_engine(string_conexao, echo=False)
 
-        """
         df_vra = pd.read_parquet('arquivos\\res\\vra\\vra_final.snappy.parquet')
 
         # Split into 4 equal (or near-equal) parts
@@ -350,7 +349,7 @@ class ConfigVRA:
             raise e
 
         print('Finalizando carga dos dados de aerodromos no MySQL.')
-        """
+        
         print('Iniciando carga dos dados de empresas aereas no MySQL...')
 
         df_empresas = pd.read_parquet('arquivos\\har\\empresas\\empresas.snappy.parquet')
